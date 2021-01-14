@@ -3,16 +3,16 @@ import React from "react";
 import {
 	FirstColoredShape,
 	SecondColoredShape,
-	CombinedColoredShape,
+	FlexContainer,
 } from "./header.styles.d";
 
 const HeaderShapes = () => {
 	return (
 		<>
-			<CombinedColoredShape>
+			<FlexContainer>
 				<FirstColoredShape />
 				<SecondColoredShape />
-			</CombinedColoredShape>
+			</FlexContainer>
 		</>
 	);
 };

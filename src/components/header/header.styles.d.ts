@@ -18,7 +18,7 @@ export const SecondColoredShape = styled.div`
 	background: #f063b8;
 	border-radius: 20px;
 `;
-export const CombinedColoredShape = styled.div`
+export const FlexContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 `;
