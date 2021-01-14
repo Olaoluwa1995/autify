@@ -1,9 +1,11 @@
 import React from "react";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 
 import HeaderShapes from "./header-shapes.component";
 import { headerLinksData } from "./header.data";
 import { FlexContainer } from "./header.styles.d";
 import LinkItem from "../link-item/link-item.component";
+import CustomButton from "../custom-button/custom-button.component";
 
 const Header = () => {
 	return (
@@ -22,6 +24,14 @@ const Header = () => {
 						);
 					})}
 				</FlexContainer>
+
+				<CustomButton>
+					<h4>Request Pricing</h4>
+					<ArrowForwardIcon
+						style={{ fontWeight: "bold", fontSize: "30px" }}
+						color="#9c69e2"
+					/>
+				</CustomButton>
 			</FlexContainer>
 		</>
 	);

@@ -1,18 +1,7 @@
-import {
-	Box,
-	BoxProps,
-	Flex,
-	Icon,
-	keyframes,
-	LinkBoxProps,
-} from "@chakra-ui/react";
+import { Box, BoxProps, Flex, Icon, LinkBoxProps } from "@chakra-ui/react";
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-
-export const underline = keyframes`
-  from { width: 0; background: 'white'}
-  to { width: "60%"; background: 'red' }
-`;
+import { underline } from "../../styles/theme";
 
 export const linkItemHoverStyles = {
 	animation: `${underline} 0.2s linear`,
