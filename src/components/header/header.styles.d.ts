@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const FirstColoredShape = styled.div`
 	width: 20px;
 	height: 20px;
-	margin-left: 240px;
 	margin-top: 45px;
 
 	background: #9c69e2;
@@ -19,6 +18,12 @@ export const SecondColoredShape = styled.div`
 	border-radius: 20px;
 `;
 export const FlexContainer = styled.div`
+	position: absolute;
 	display: flex;
 	flex-direction: row;
+`;
+
+export const HeaderContainer = styled(FlexContainer)`
+	position: relative;
+	margin: 0 15%;
 `;

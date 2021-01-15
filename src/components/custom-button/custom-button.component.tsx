@@ -13,15 +13,15 @@ const CustomButton: React.FC<CustomButtonProps> = ({
 	return (
 		<Button
 			w="200px"
-			rounded="10px"
+			rounded="50px"
 			fontSize="0.9rem"
 			border="1px solid white"
 			backgroundColor="white"
-			borderRadius="50px"
-			mt="20px"
+			//borderRadius="50px"
 			boxShadow="0px 5px 5px rgba(75, 93, 104, 0.1)"
+			mt="20px"
 			h="50px"
-			ml="300px"
+			ml="80%"
 			maxW="200px"
 			fontW
 			eight="normal"

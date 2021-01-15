@@ -3,21 +3,21 @@ import { ArrowForwardIcon } from "@chakra-ui/icons";
 
 import HeaderShapes from "./header-shapes.component";
 import { headerLinksData } from "./header.data";
-import { FlexContainer } from "./header.styles.d";
+import { HeaderContainer, FlexContainer } from "./header.styles.d";
 import LinkItem from "../link-item/link-item.component";
 import CustomButton from "../custom-button/custom-button.component";
 
 const Header = () => {
 	return (
 		<>
-			<FlexContainer>
+			<HeaderContainer>
 				<HeaderShapes />
-				<FlexContainer style={{ marginTop: "40px", marginLeft: "200px" }}>
+				<FlexContainer style={{ marginLeft: "25%", marginTop: "45px" }}>
 					{headerLinksData.map((data: any) => {
 						return (
 							<LinkItem
 								aria-label={data.title}
-								style={{ marginLeft: "30px" }}
+								style={{ marginLeft: "15%" }}
 								url={data.url}>
 								{data.title}
 							</LinkItem>
@@ -32,7 +32,7 @@ const Header = () => {
 						color="#9c69e2"
 					/>
 				</CustomButton>
-			</FlexContainer>
+			</HeaderContainer>
 		</>
 	);
 };
