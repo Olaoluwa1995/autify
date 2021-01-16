@@ -1,11 +1,14 @@
 import React from "react";
+import { Flex } from "@chakra-ui/react";
 import Header from "../../components/header/header.component";
+import BannerSection from "../../components/banner/banner.component";
 
 const HomePage = () => {
 	return (
-		<div>
+		<Flex direction="column" bgGradient="linear(to-b, #68C9BA, #FFFFFF)">
 			<Header />
-		</div>
+			<BannerSection />
+		</Flex>
 	);
 };
 

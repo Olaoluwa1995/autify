@@ -1,18 +1,15 @@
 import React from "react";
+import { Flex } from "@chakra-ui/react";
 
-import {
-	FirstColoredShape,
-	SecondColoredShape,
-	FlexContainer,
-} from "./header.styles.d";
+import { FirstColoredShape, SecondColoredShape } from "./header.styles.d";
 
 const HeaderShapes = () => {
 	return (
 		<>
-			<FlexContainer>
+			<Flex direction="row" position="absolute">
 				<FirstColoredShape />
 				<SecondColoredShape />
-			</FlexContainer>
+			</Flex>
 		</>
 	);
 };

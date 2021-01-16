@@ -1,18 +1,23 @@
 import React from "react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { Flex } from "@chakra-ui/react";
 
 import HeaderShapes from "./header-shapes.component";
 import { headerLinksData } from "./header.data";
-import { HeaderContainer, FlexContainer } from "./header.styles.d";
 import LinkItem from "../link-item/link-item.component";
 import CustomButton from "../custom-button/custom-button.component";
 
 const Header = () => {
 	return (
 		<>
-			<HeaderContainer>
+			<Flex position="relative" mx="10%" mb="10px">
 				<HeaderShapes />
-				<FlexContainer style={{ marginLeft: "25%", marginTop: "45px" }}>
+				<Flex
+					as="header"
+					position="absolute"
+					direction="row"
+					ml="25%"
+					mt="35px">
 					{headerLinksData.map((data: any) => {
 						return (
 							<LinkItem
@@ -23,16 +28,20 @@ const Header = () => {
 							</LinkItem>
 						);
 					})}
-				</FlexContainer>
+				</Flex>
 
-				<CustomButton>
+				<CustomButton
+					position="absolute"
+					width="180px"
+					backgroundColor="white"
+					mt="20px"
+					height="50px"
+					ml="80%"
+					maxW="200px">
 					<h4>Request Pricing</h4>
-					<ArrowForwardIcon
-						style={{ fontWeight: "bold", fontSize: "30px" }}
-						color="#9c69e2"
-					/>
+					<ArrowForwardIcon fontWeight="bold" fontSize="30px" color="#9c69e2" />
 				</CustomButton>
-			</HeaderContainer>
+			</Flex>
 		</>
 	);
 };

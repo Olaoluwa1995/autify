@@ -22,8 +22,3 @@ export const FlexContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 `;
-
-export const HeaderContainer = styled(FlexContainer)`
-	position: relative;
-	margin: 0 15%;
-`;

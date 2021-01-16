@@ -4,29 +4,30 @@ import ButtonLoader from "./button-loader/button-loader.component";
 
 export type CustomButtonProps = {
 	to?: string;
+	width: string;
+	height: string;
+	backgroundColor: string;
 } & ButtonProps;
 
 const CustomButton: React.FC<CustomButtonProps> = ({
+	width,
+	height,
+	backgroundColor,
 	children,
 	...otherProps
 }) => {
 	return (
 		<Button
-			w="200px"
+			w={width}
 			rounded="50px"
 			fontSize="0.9rem"
 			border="1px solid white"
-			backgroundColor="white"
-			//borderRadius="50px"
+			backgroundColor={backgroundColor}
 			boxShadow="0px 5px 5px rgba(75, 93, 104, 0.1)"
-			mt="20px"
-			h="50px"
-			ml="80%"
-			maxW="200px"
-			fontW
-			eight="normal"
+			h={height}
+			fontWeight="normal"
 			_hover={{
-				border: "2px solid #9c69e2",
+				border: "2px solid blue",
 			}}
 			spinner={<ButtonLoader />}
 			{...otherProps}>
