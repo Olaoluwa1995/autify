@@ -12,7 +12,7 @@ const BannerSection = () => {
 
 	return (
 		<>
-			<Flex h="380px" mt="100px" mx="10%">
+			<Flex h="380px" mt="150px" mx="10%">
 				<Flex
 					flexDirection="column"
 					//alignItems="space-between"

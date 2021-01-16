@@ -16,7 +16,7 @@ const Header = () => {
 					as="header"
 					position="absolute"
 					direction="row"
-					ml="25%"
+					ml="20%"
 					mt="35px">
 					{headerLinksData.map((data: any) => {
 						return (
