@@ -12,27 +12,28 @@ const FeaturesSection = () => {
 	return (
 		<>
 			<Flex
-				h="400px"
+				h="900px"
 				mt="50px"
 				ml="10%"
 				mr="18%"
 				direction="column"
 				textAlign="center">
-				<Box as="h3" fontSize="35px" fontWeight="bolder" color="#212353">
+				<Box fontSize="35px" fontWeight="bolder" color="#212353">
 					Features
 				</Box>
-				<Box as="p" fontSize="15px" mx="20%">
+				<Box fontSize="18px" mt="25px" mx="20%">
 					{featuresText}
 				</Box>
-				<Flex flexWrap="wrap" mt="5%">
+				<Flex flexWrap="wrap" mt="25px">
 					{featuresData.map((feature) => {
 						return (
 							<Feature
 								key={feature.key}
-								as={feature.as}
+								ariaLabel={feature.ariaLabel}
+								url={feature.url}
+								src={feature.src}
 								marginTop={feature.marginTop}
-								paddingLeft={feature.paddingLeft}
-								width={feature.width}
+								marginXAxis={feature.marginXAxis}
 							/>
 						);
 					})}

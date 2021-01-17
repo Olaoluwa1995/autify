@@ -1,17 +1,29 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
+import LinkItem from "../link-item/link-item.component";
 
 type FeatureProps = {
+	key: number;
 	marginTop?: string;
-	paddingLeft?: string;
-	width: string;
-	as: any;
+	marginXAxis: string;
+	src: string;
+	ariaLabel: string;
+	url: string;
 };
-const Feature = ({ marginTop, paddingLeft, width, as }: FeatureProps) => {
+const Feature = ({
+	key,
+	marginTop,
+	marginXAxis,
+	src,
+	ariaLabel,
+	url,
+}: FeatureProps) => {
 	return (
-		<>
-			<Box as={as} w={width} h="45%" mt={marginTop} pl={paddingLeft} />
-		</>
+		<Box w="46%" key={key} mt={marginTop} mx={marginXAxis}>
+			<LinkItem aria-label={ariaLabel} url={url}>
+				<Image src={src} w="100%" alt={ariaLabel} />
+			</LinkItem>
+		</Box>
 	);
 };
 

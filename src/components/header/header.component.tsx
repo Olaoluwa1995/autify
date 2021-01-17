@@ -20,10 +20,7 @@ const Header = () => {
 					mt="35px">
 					{headerLinksData.map((data: any) => {
 						return (
-							<LinkItem
-								aria-label={data.title}
-								style={{ marginLeft: "15%" }}
-								url={data.url}>
+							<LinkItem aria-label={data.title} ml="15%" url={data.url}>
 								{data.title}
 							</LinkItem>
 						);

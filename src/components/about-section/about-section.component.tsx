@@ -1,7 +1,7 @@
 import React from "react";
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Image } from "@chakra-ui/react";
 
-import { ReactComponent as AboutSectionImage } from "../../assets/images/about.svg";
+import AboutSectionImage from "../../assets/images/about.png";
 
 const AboutSection = () => {
 	const aboutText = `
@@ -15,14 +15,13 @@ const AboutSection = () => {
 	return (
 		<>
 			<Flex
-				h="400px"
 				mt="80px"
 				ml="10%"
 				mr="18%"
 				backgroundColor="rgba(240, 99, 184, 0.15)"
 				borderRadius="50px">
 				<Flex ml="-2.5%" w="50%">
-					<Box as={AboutSectionImage} />
+					<Image src={AboutSectionImage} alt="about section image" w="50%" />
 				</Flex>
 
 				<Flex w="50%" mt="6%" ml="4%" mr="6%" direction="column" mb="10%">

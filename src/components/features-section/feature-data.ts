@@ -1,37 +1,48 @@
-import { ReactComponent as AccessFeatureImage } from "../../assets/images/access-feature.svg";
-import { ReactComponent as PrintOutFeatureImage } from "../../assets/images/print-out-feature.svg";
-import { ReactComponent as SearchFeatureImage } from "../../assets/images/search-feature.svg";
-import { ReactComponent as SecurityFeatureImage } from "../../assets/images/security-feature.svg";
+import AccessFeatureImage from "../../assets/images/access-feature.png";
+import PrintOutFeatureImage from "../../assets/images/print-out-feature.png";
+import SearchFeatureImage from "../../assets/images/search-feature.png";
+import SecurityFeatureImage from "../../assets/images/security-feature.png";
 
 type FeatureProps = {
 	key: number;
-	as: any;
 	marginTop?: string;
-	paddingLeft?: string;
-	width: string;
+	marginXAxis: string;
+	ariaLabel: string;
+	url: string;
+	src: string;
 };
+
+const marginXAxis = "2%";
 
 export const featuresData: FeatureProps[] = [
 	{
 		key: 1,
-		as: SearchFeatureImage,
-		width: "50%",
+		src: SearchFeatureImage,
+		ariaLabel: "search feature",
+		url: "#",
+		marginXAxis: `${marginXAxis}`,
 	},
 	{
 		key: 2,
-		as: AccessFeatureImage,
-		marginTop: "25px",
-		width: "50%",
+		src: AccessFeatureImage,
+		marginTop: "20px",
+		ariaLabel: "access feature",
+		url: "#",
+		marginXAxis: `${marginXAxis}`,
 	},
 	{
 		key: 3,
-		as: PrintOutFeatureImage,
-		width: "50%",
+		src: PrintOutFeatureImage,
+		marginTop: "15px",
+		ariaLabel: "print-out feature",
+		url: "#",
+		marginXAxis: `${marginXAxis}`,
 	},
 	{
 		key: 4,
-		as: SecurityFeatureImage,
-		paddingLeft: "5%",
-		width: "45%",
+		src: SecurityFeatureImage,
+		ariaLabel: "security feature",
+		url: "#",
+		marginXAxis: `${marginXAxis}`,
 	},
 ];
