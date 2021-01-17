@@ -1,10 +1,10 @@
 import React from "react";
 import { Box, Flex } from "@chakra-ui/react";
 
-import { ReactComponent as AboutSectionImage } from "../../assets/images/about-image.svg";
+import { ReactComponent as AboutSectionImage } from "../../assets/images/about.svg";
 
 const AboutSection = () => {
-	const bannerText = `
+	const aboutText = `
     The place to store various data that you can access at 
     any time through the internet  and where you can carry it. 
     This very flexible storage area has a high level of security. 
@@ -16,7 +16,7 @@ const AboutSection = () => {
 		<>
 			<Flex
 				h="400px"
-				mt="50px"
+				mt="80px"
 				ml="10%"
 				mr="18%"
 				backgroundColor="rgba(240, 99, 184, 0.15)"
@@ -25,15 +25,15 @@ const AboutSection = () => {
 					<Box as={AboutSectionImage} />
 				</Flex>
 
-				<Flex w="50%" mt="12%" ml="5%" mr="9%" direction="column">
-					<Box as="p" fontSize="25px" fontWeight="bolder" textAlign="start">
+				<Flex w="50%" mt="6%" ml="4%" mr="6%" direction="column" mb="10%">
+					<Box as="p" fontSize="35px" fontWeight="bolder" textAlign="start">
 						Scale With{" "}
 						<Box as="span" color="#656691">
 							Autify
 						</Box>
 					</Box>
-					<Box as="p" fontSize="12px" textAlign="justify">
-						{bannerText}
+					<Box as="p" fontSize="14px" textAlign="justify" mt="5%">
+						{aboutText}
 					</Box>
 				</Flex>
 			</Flex>

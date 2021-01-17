@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Flex } from "@chakra-ui/react";
 
-import { ReactComponent as BannerImage } from "../../assets/images/banner-image.svg";
+import { ReactComponent as BannerImage } from "../../assets/images/banner.svg";
 import CustomButton from "../custom-button/custom-button.component";
 const BannerSection = () => {
 	const bannerText = `

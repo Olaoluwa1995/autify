@@ -3,6 +3,7 @@ import { Flex } from "@chakra-ui/react";
 import Header from "../../components/header/header.component";
 import BannerSection from "../../components/banner-section/banner-section.component";
 import AboutSection from "../../components/about-section/about-section.component";
+import FeaturesSection from "../../components/features-section/features-section.component";
 
 const HomePage = () => {
 	return (
@@ -11,9 +12,8 @@ const HomePage = () => {
 				<Header />
 				<BannerSection />
 			</Flex>
-			<Flex>
-				<AboutSection />
-			</Flex>
+			<AboutSection />
+			<FeaturesSection />
 		</>
 	);
 };
