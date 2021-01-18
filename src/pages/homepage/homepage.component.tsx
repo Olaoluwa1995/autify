@@ -4,7 +4,7 @@ import Header from "../../components/header/header.component";
 import BannerSection from "../../components/banner-section/banner-section.component";
 import AboutSection from "../../components/about-section/about-section.component";
 import FeaturesSection from "../../components/features-section/features-section.component";
-import CarouselsSection from "../../components/carousels-section/carousels-section.component";
+import TestimonialsSection from "../../components/testimonials-section/testimonials-section.component";
 
 const HomePage = () => {
 	return (
@@ -15,7 +15,7 @@ const HomePage = () => {
 			</Flex>
 			<AboutSection />
 			<FeaturesSection />
-			<CarouselsSection />
+			<TestimonialsSection />
 		</>
 	);
 };

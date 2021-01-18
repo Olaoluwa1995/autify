@@ -11,13 +11,7 @@ const FeaturesSection = () => {
 
 	return (
 		<>
-			<Flex
-				h="900px"
-				mt="50px"
-				ml="10%"
-				mr="18%"
-				direction="column"
-				textAlign="center">
+			<Flex mt="50px" ml="10%" mr="18%" direction="column" textAlign="center">
 				<Box fontSize="35px" fontWeight="bolder" color="#212353">
 					Features
 				</Box>
@@ -27,14 +21,17 @@ const FeaturesSection = () => {
 				<Flex flexWrap="wrap" mt="25px">
 					{featuresData.map((feature) => {
 						return (
-							<Feature
+							<Box
 								key={feature.key}
-								ariaLabel={feature.ariaLabel}
-								url={feature.url}
-								src={feature.src}
-								marginTop={feature.marginTop}
-								marginXAxis={feature.marginXAxis}
-							/>
+								w="46%"
+								mt={feature.marginTop}
+								mx={feature.marginXAxis}>
+								<Feature
+									ariaLabel={feature.ariaLabel}
+									url={feature.url}
+									src={feature.src}
+								/>
+							</Box>
 						);
 					})}
 				</Flex>

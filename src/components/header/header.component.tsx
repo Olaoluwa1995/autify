@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import { Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 
 import HeaderShapes from "./header-shapes.component";
 import { headerLinksData } from "./header.data";
@@ -18,11 +18,13 @@ const Header = () => {
 					direction="row"
 					ml="20%"
 					mt="35px">
-					{headerLinksData.map((data: any) => {
+					{headerLinksData.map((headerLink: any) => {
 						return (
-							<LinkItem aria-label={data.title} ml="15%" url={data.url}>
-								{data.title}
-							</LinkItem>
+							<Box key={headerLink.key} ml="15%">
+								<LinkItem aria-label={headerLink.title} url={headerLink.url}>
+									{headerLink.title}
+								</LinkItem>
+							</Box>
 						);
 					})}
 				</Flex>

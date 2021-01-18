@@ -21,7 +21,12 @@ const AboutSection = () => {
 				backgroundColor="rgba(240, 99, 184, 0.15)"
 				borderRadius="50px">
 				<Flex ml="-2.5%" w="50%">
-					<Image src={AboutSectionImage} alt="about section image" w="50%" />
+					<Image
+						src={AboutSectionImage}
+						alt="about section image"
+						w="100%"
+						my="10%"
+					/>
 				</Flex>
 
 				<Flex w="50%" mt="6%" ml="4%" mr="6%" direction="column" mb="10%">
