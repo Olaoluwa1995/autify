@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { Swiper } from "swiper/react";
 
+import ChatIcon from "../../assets/icons/arrow.svg";
+
 export const TestimonialsContainer = styled.div`
 	display: block;
-	margin-left: 10%;
-	margin-right: 18%;
+	margin: 0 10%;
 	background-color: #9c69e2;
 	border-radius: 50px;
 	margin-top: 80px;
@@ -12,19 +13,44 @@ export const TestimonialsContainer = styled.div`
 
 export const SwiperContainer = styled.div`
 	display: flex;
-	padding-top: 23%;
+	padding-top: 20%;
 	height: 100%;
 	padding-bottom: 5%;
 `;
 
 export const SwiperDiv = styled(Swiper)`
 	width: 100%;
-	height: 60%;
+	height: 320px;
 	padding-bottom: 3%;
+
+	.swiper-button-next {
+		background-image: url(${ChatIcon}) !important;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		background-position: center;
+		transform: rotate(180deg);
+	}
+
+	.swiper-button-next::after {
+		display: none;
+	}
+	.swiper-button-prev {
+		background-image: url(${ChatIcon}) !important;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		background-position: center;
+	}
+
+	.swiper-button-prev::after {
+		display: none;
+	}
 
 	.swiper-button-prev,
 	.swiper-button-next {
 		color: black;
+		margin-top: 130px;
+		margin-left: 86%;
+		margin-right: 5%;
 	}
 
 	.swiper-pagination {
@@ -32,7 +58,6 @@ export const SwiperDiv = styled(Swiper)`
 		width: 20%;
 		--swiper-theme-color: red;
 	}
-
 	.swiper-wrapper {
 		padding: 0;
 
@@ -42,13 +67,8 @@ export const SwiperDiv = styled(Swiper)`
 	}
 `;
 
-// .card {
-// 	/* Add shadows to create the "card" effect */
-// 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-// 	transition: 0.3s;
-//   }
-
-//   /* On mouse-over, add a deeper shadow */
-//   .card:hover {
-// 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-//   }
+export const SlideContainer = styled.div`
+	border-radius: 50px;
+	background-color: white;
+	box-shadow: 0 15px 8px 0 #803cde;
+`;

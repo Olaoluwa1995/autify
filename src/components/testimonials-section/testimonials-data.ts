@@ -13,7 +13,7 @@ export const slides: SlidesProps[] = [
 		key: 1,
 		name: "Timmy Brain",
 		src: AvatarImage,
-		title: "fxnigeria.com",
+		title: "Engineer",
 		description:
 			"Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.",
 	},
@@ -21,7 +21,7 @@ export const slides: SlidesProps[] = [
 		key: 2,
 		name: "Larry Brain",
 		src: AvatarImage,
-		title: "futurex.com",
+		title: "Doctor",
 		description:
 			"Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.",
 	},
@@ -29,7 +29,7 @@ export const slides: SlidesProps[] = [
 		key: 3,
 		name: "Tim kross",
 		src: AvatarImage,
-		title: "digital.com",
+		title: "Lawyer",
 		description:
 			"Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.",
 	},
@@ -37,7 +37,7 @@ export const slides: SlidesProps[] = [
 		key: 4,
 		name: "Timmy Brain",
 		src: AvatarImage,
-		title: "fxnigeria.com",
+		title: "Teacher",
 		description:
 			"Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.",
 	},
@@ -45,7 +45,7 @@ export const slides: SlidesProps[] = [
 		key: 5,
 		name: "Elon Jobs",
 		src: AvatarImage,
-		title: "fxnigeria.com",
+		title: "Developer",
 		description:
 			"Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.",
 	},

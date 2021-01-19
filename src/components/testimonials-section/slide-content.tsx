@@ -1,5 +1,6 @@
 import React from "react";
 import { Avatar, Box, Flex } from "@chakra-ui/react";
+import { SlideContainer } from "./testimonials-section.styles.d";
 
 type SlideContentProps = {
 	name: string;
@@ -10,7 +11,7 @@ type SlideContentProps = {
 const SlideContent = ({ name, src, title, description }: SlideContentProps) => {
 	return (
 		<>
-			<Box h="300px" w="500px" borderRadius="50px" backgroundColor="white">
+			<SlideContainer>
 				<Flex direction="row" alignItems="start" mx="10%">
 					<Flex w="30%" marginTop="10%">
 						<Avatar name={name} src={src} />
@@ -20,12 +21,12 @@ const SlideContent = ({ name, src, title, description }: SlideContentProps) => {
 							{name}
 						</Box>
 						<Box fontSize="smaller">{title}</Box>
-						<Box mt="5%" fontSize="medium">
+						<Box mt="5%" mb="20%" fontSize="medium">
 							{description}
 						</Box>
 					</Flex>
 				</Flex>
-			</Box>
+			</SlideContainer>
 		</>
 	);
 };

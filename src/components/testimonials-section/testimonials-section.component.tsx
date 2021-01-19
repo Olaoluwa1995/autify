@@ -21,10 +21,10 @@ const TestimonialsSection = () => {
 		<>
 			<TestimonialsContainer>
 				<Box pt="20px" w="72%" position="absolute">
-					<Image src={UnderlayImage} alt="underlay image" w="100%" />
+					<Image src={UnderlayImage} alt="underlay image" w="111%" />
 				</Box>
 				<Box w="72%" position="absolute">
-					<Image src={OverlayImage} alt="overlay image" w="100%" />
+					<Image src={OverlayImage} alt="overlay image" w="111%" />
 				</Box>
 				<Box
 					position="absolute"
@@ -37,13 +37,13 @@ const TestimonialsSection = () => {
 				</Box>
 				<SwiperContainer>
 					<SwiperDiv
-						autoplay={{ delay: 2000 }}
+						autoplay={{ delay: 2000, disableOnInteraction: false }}
 						speed={800}
 						navigation
 						pagination
 						centeredSlides={true}
 						slidesPerView={1.7}
-						spaceBetween={10}>
+						spaceBetween={80}>
 						{slides.map((slide) => {
 							return (
 								<SwiperSlide key={slide.key}>

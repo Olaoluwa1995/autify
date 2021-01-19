@@ -2,7 +2,7 @@ import React from "react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { Box, Flex } from "@chakra-ui/react";
 
-import HeaderShapes from "./header-shapes.component";
+import { HeaderColoredShapes } from "../shapes/shapes";
 import { headerLinksData } from "./header.data";
 import LinkItem from "../link-item/link-item.component";
 import CustomButton from "../custom-button/custom-button.component";
@@ -11,7 +11,7 @@ const Header = () => {
 	return (
 		<>
 			<Flex position="relative" mx="10%" mb="10px">
-				<HeaderShapes />
+				<HeaderColoredShapes />
 				<Flex
 					as="header"
 					position="absolute"
@@ -38,7 +38,7 @@ const Header = () => {
 					ml="80%"
 					maxW="200px">
 					<h4>Request Pricing</h4>
-					<ArrowForwardIcon fontWeight="bold" fontSize="30px" color="#9c69e2" />
+					<ArrowForwardIcon fontWeight="bold" fontSize="20px" color="#9c69e2" />
 				</CustomButton>
 			</Flex>
 		</>

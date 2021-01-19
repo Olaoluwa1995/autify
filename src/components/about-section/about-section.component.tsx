@@ -16,8 +16,7 @@ const AboutSection = () => {
 		<>
 			<Flex
 				mt="80px"
-				ml="10%"
-				mr="18%"
+				mx="10%"
 				backgroundColor="rgba(240, 99, 184, 0.15)"
 				borderRadius="50px">
 				<Flex ml="-2.5%" w="50%">
@@ -29,14 +28,14 @@ const AboutSection = () => {
 					/>
 				</Flex>
 
-				<Flex w="50%" mt="6%" ml="4%" mr="6%" direction="column" mb="10%">
+				<Flex w="50%" mt="8%" ml="6%" mr="10%" direction="column" mb="10%">
 					<Box as="p" fontSize="35px" fontWeight="bolder" textAlign="start">
 						Scale With{" "}
 						<Box as="span" color="#656691">
 							Autify
 						</Box>
 					</Box>
-					<Box as="p" fontSize="14px" textAlign="justify" mt="5%">
+					<Box as="p" fontSize="16px" textAlign="justify" mt="10%">
 						{aboutText}
 					</Box>
 				</Flex>

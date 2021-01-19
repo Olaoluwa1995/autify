@@ -11,11 +11,11 @@ const FeaturesSection = () => {
 
 	return (
 		<>
-			<Flex mt="50px" ml="10%" mr="18%" direction="column" textAlign="center">
+			<Flex mt="50px" mx="10%" direction="column" textAlign="center">
 				<Box fontSize="35px" fontWeight="bolder" color="#212353">
 					Features
 				</Box>
-				<Box fontSize="18px" mt="25px" mx="20%">
+				<Box fontSize="16px" mt="25px" mx="20%">
 					{featuresText}
 				</Box>
 				<Flex flexWrap="wrap" mt="25px">
