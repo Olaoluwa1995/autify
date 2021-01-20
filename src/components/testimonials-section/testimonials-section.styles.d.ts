@@ -49,7 +49,7 @@ export const SwiperDiv = styled(Swiper)`
 	.swiper-button-next {
 		color: black;
 		margin-top: 130px;
-		margin-left: 86%;
+		margin-left: 82%;
 		margin-right: 5%;
 	}
 
