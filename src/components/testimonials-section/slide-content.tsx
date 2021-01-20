@@ -14,10 +14,10 @@ const SlideContent = ({ name, src, title, description }: SlideContentProps) => {
 			<SlideContainer>
 				<Flex direction="row" alignItems="start" mx="10%">
 					<Flex w="30%" marginTop="10%">
-						<Avatar name={name} src={src} />
+						<Avatar size="xl" name={name} src={src} />
 					</Flex>
-					<Flex direction="column" textAlign="justify" ml="20%">
-						<Box mt="20%" fontWeight="bold">
+					<Flex direction="column" textAlign="justify" ml="10%">
+						<Box mt="20%" fontSize="large" fontWeight="bold">
 							{name}
 						</Box>
 						<Box fontSize="smaller">{title}</Box>

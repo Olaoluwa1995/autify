@@ -7,19 +7,19 @@ import AboutSection from "../../components/about-section/about-section.component
 import FeaturesSection from "../../components/features-section/features-section.component";
 import TestimonialsSection from "../../components/testimonials-section/testimonials-section.component";
 import Footer from "../../components/footer/footer.component";
-import { HomepageDivider } from "./homepage.styles.d";
+import { Divider } from "../../styles/divider.d";
 
 const HomePage = () => {
 	return (
 		<>
 			<Flex direction="column" bgGradient="linear(to-b, #68C9BA, #FFFFFF)">
-				<Header />
+				<Header marginLeft="20%" isButtonVisible={true} />
 				<BannerSection />
 			</Flex>
 			<AboutSection />
 			<FeaturesSection />
 			<TestimonialsSection />
-			<HomepageDivider />
+			<Divider />
 			<Footer />
 		</>
 	);

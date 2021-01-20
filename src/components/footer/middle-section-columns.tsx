@@ -9,16 +9,16 @@ import { socialIcons } from "./footer-data";
 export const FirstColumn = () => {
 	return (
 		<Flex flexDir="column" width="35%" alignItems="flex-start">
-			<Box>
+			<Flex flexDir="row">
 				<FooterColoredShapes />
-				<Box fontSize="18px" fontWeight="bold" pl="80%">
+				<Box fontSize="16px" fontWeight="bold" pl="80%">
 					Autify
 				</Box>
-			</Box>
-			<Box fontSize="11px" mt="20%">
+			</Flex>
+			<Box fontSize="11px" mt="15%">
 				Samonda, Ibadan Nigeria
 			</Box>
-			<Box fontSize="12px" mt="20%" fontWeight="bold" textAlign="justify">
+			<Box fontSize="12px" mt="15%" fontWeight="bold" textAlign="justify">
 				<Box>info@autify.project</Box>
 				<Box>1-232-3434</Box>
 			</Box>
@@ -35,8 +35,8 @@ export const SecondColumn = () => {
 			justifyContent="space-around">
 			{middleColumnData.map((column) => {
 				return (
-					<Flex flexDir="column" key={column.key}>
-						<Box fontSize="18px" fontWeight="bold" mb="80%">
+					<Flex flexDir="column" key={column.key} alignItems="flex-start">
+						<Box fontSize="16px" fontWeight="bold" mb="30px">
 							{column.title}
 						</Box>
 
@@ -45,10 +45,11 @@ export const SecondColumn = () => {
 								<Flex
 									key={link.key}
 									flexDir="column"
-									mb="30%"
-									fontSize="13px"
+									mb="20%"
 									textAlign="justify">
-									<LinkItem url={link.url}>{link.title}</LinkItem>
+									<LinkItem url={link.url} fontSize="13px">
+										{link.title}
+									</LinkItem>
 								</Flex>
 							);
 						})}
@@ -61,15 +62,15 @@ export const SecondColumn = () => {
 
 export const ThirdColumn = () => {
 	return (
-		<Flex flexDir="column" w="30%" alignItems="center">
-			<Box fontSize="18px" fontWeight="bold" mb="13%">
+		<Flex flexDir="column" w="30%" pl="5%">
+			<Box fontSize="16px" fontWeight="bold" mb="30px">
 				Social Media
 			</Box>
 			<Flex flexDir="row">
 				{socialIcons.map((icon) => {
 					return (
-						<LinkItem key={icon.key} url={icon.url} ml="5%">
-							<Image src={icon.src} alt={icon.name} />
+						<LinkItem key={icon.key} url={icon.url} mr="2%">
+							<Image src={icon.src} alt={icon.name} w="40px" minW="30px" />
 						</LinkItem>
 					);
 				})}

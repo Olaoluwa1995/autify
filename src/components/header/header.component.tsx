@@ -7,17 +7,24 @@ import { headerLinksData } from "./header.data";
 import LinkItem from "../link-item/link-item.component";
 import CustomButton from "../custom-button/custom-button.component";
 
-const Header = () => {
+type HeaderProps = {
+	isButtonVisible: boolean;
+	marginLeft: string;
+};
+
+const Header = ({ isButtonVisible, marginLeft }: HeaderProps) => {
 	return (
 		<>
 			<Flex position="relative" mx="10%" mb="10px">
-				<HeaderColoredShapes />
+				<LinkItem aria-label="homepage" url="/">
+					<HeaderColoredShapes />
+				</LinkItem>
 				<Flex
 					as="header"
 					position="absolute"
 					direction="row"
-					ml="20%"
-					mt="35px">
+					ml={marginLeft}
+					mt="40px">
 					{headerLinksData.map((headerLink: any) => {
 						return (
 							<Box key={headerLink.key} ml="15%">
@@ -28,18 +35,27 @@ const Header = () => {
 						);
 					})}
 				</Flex>
-
-				<CustomButton
-					position="absolute"
-					width="180px"
-					backgroundColor="white"
-					mt="20px"
-					height="50px"
-					ml="80%"
-					maxW="200px">
-					<h4>Request Pricing</h4>
-					<ArrowForwardIcon fontWeight="bold" fontSize="20px" color="#9c69e2" />
-				</CustomButton>
+				{isButtonVisible ? (
+					<LinkItem aria-label="request pricing" url="/pricing">
+						<CustomButton
+							position="absolute"
+							width="180px"
+							backgroundColor="white"
+							mt="20px"
+							height="50px"
+							ml="80%">
+							<Box fontSize="17px" fontWeight="500" color="#000">
+								Request Pricing
+							</Box>
+							<ArrowForwardIcon
+								fontWeight="bold"
+								fontSize="20px"
+								color="#9c69e2"
+								mt="3px"
+							/>
+						</CustomButton>
+					</LinkItem>
+				) : null}
 			</Flex>
 		</>
 	);

@@ -28,14 +28,14 @@ const AboutSection = () => {
 					/>
 				</Flex>
 
-				<Flex w="50%" mt="8%" ml="6%" mr="10%" direction="column" mb="10%">
+				<Flex w="50%" mt="11%" ml="6%" mr="10%" direction="column" mb="10%">
 					<Box as="p" fontSize="35px" fontWeight="bolder" textAlign="start">
 						Scale With{" "}
 						<Box as="span" color="#656691">
 							Autify
 						</Box>
 					</Box>
-					<Box as="p" fontSize="16px" textAlign="justify" mt="10%">
+					<Box as="p" fontSize="17px" textAlign="justify" mt="10%">
 						{aboutText}
 					</Box>
 				</Flex>

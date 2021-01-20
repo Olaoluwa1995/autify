@@ -15,7 +15,7 @@ export const SwiperContainer = styled.div`
 	display: flex;
 	padding-top: 20%;
 	height: 100%;
-	padding-bottom: 5%;
+	padding-bottom: 4%;
 `;
 
 export const SwiperDiv = styled(Swiper)`

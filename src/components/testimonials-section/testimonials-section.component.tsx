@@ -20,11 +20,11 @@ const TestimonialsSection = () => {
 	return (
 		<>
 			<TestimonialsContainer>
-				<Box pt="20px" w="72%" position="absolute">
-					<Image src={UnderlayImage} alt="underlay image" w="111%" />
+				<Box pt="20px" w="80%" position="absolute">
+					<Image src={UnderlayImage} alt="underlay image" />
 				</Box>
-				<Box w="72%" position="absolute">
-					<Image src={OverlayImage} alt="overlay image" w="111%" />
+				<Box w="80%" position="absolute">
+					<Image src={OverlayImage} alt="overlay image" />
 				</Box>
 				<Box
 					position="absolute"

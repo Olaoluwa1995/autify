@@ -8,18 +8,13 @@ import AppStoreImage from "../../assets/images/app-store.png";
 const AboveSection = () => {
 	return (
 		<Flex direction="row" w="100%">
-			<Flex
-				flexDir="column"
-				alignItems="flex-start"
-				w="50%"
-				mt="4%"
-				color="#212353">
+			<Flex flexDir="column" alignItems="flex-start" w="60%" color="#212353">
 				<Box fontSize="40px" fontWeight="bold">
 					Download Autify App!
 				</Box>
-				<Box fontSize="18px">Get the best at the go with Autify mobile</Box>
+				<Box fontSize="16px">Get the best at the go with Autify mobile</Box>
 			</Flex>
-			<Flex w="50%" flexDirection="row-reverse" mt="4%">
+			<Flex w="40%" flexDirection="row-reverse" mt="20px">
 				<LinkItem url="#">
 					<Image src={AppStoreImage} alt="App Store" w="90%" />
 				</LinkItem>

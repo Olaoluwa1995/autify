@@ -1,15 +1,19 @@
 import React from "react";
-import "./App.css";
-import { BrowserRouter as Router } from "react-router-dom";
-import HomePage from "./pages/homepage/homepage.component";
+import { Route, Switch } from "react-router-dom";
+import HomePage from "./pages/home/home.component";
+import PricingPage from "./pages/pricing/pricing.component";
+
+import { CSSReset, ChakraProvider } from "@chakra-ui/react";
 
 function App() {
 	return (
-		<div className="App">
-			<Router>
-				<HomePage />
-			</Router>
-		</div>
+		<ChakraProvider>
+			<CSSReset />
+			<Switch>
+				<Route exact path="/" component={HomePage} />
+				<Route exact path="/pricing" component={PricingPage} />
+			</Switch>
+		</ChakraProvider>
 	);
 }
 

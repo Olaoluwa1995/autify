@@ -20,17 +20,16 @@ const BannerSection = () => {
 						<Box>Do More With</Box>
 						<Box color="#656691">Autify</Box>
 					</Box>
-					<Box>
+					<Box mt="20px">
 						<p>{bannerText}</p>
 					</Box>
-					<Box>
+					<Box mt="25px">
 						<CustomButton
 							width="100px"
 							backgroundColor="#9c69e2"
-							mt="20px"
 							height="50px"
-							maxW="150px">
-							Learn more
+							fontWeight="800px">
+							Get Autify
 						</CustomButton>
 					</Box>
 				</Flex>

@@ -43,12 +43,12 @@ const LinkItem: React.FC<LinkProps> = ({
 		<Box
 			as={isAnchor ? "a" : isLink ? Link : NavLink}
 			{...(isAnchor ? { href: url } : { to: url })}
-			mx={{ base: "0.7rem", lg: 4 }}
 			fontSize={{ base: "0.9rem", lg: "1rem" }}
 			textDecoration="none"
 			_hover={{ textDecoration: "none", color: "inherit", ...hoverProps }}
 			role="group"
 			zIndex={2}
+			color="#9c69e2"
 			className={className}
 			{...otherProps}>
 			<Flex as="span" {...textProps}>

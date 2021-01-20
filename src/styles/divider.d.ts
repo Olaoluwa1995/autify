@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const HomepageDivider = styled.hr`
-	margin-top: 10%;
+export const Divider = styled.hr`
+	margin-top: 5%;
 	margin-bottom: 3%;
 	opacity: 0.3;
 	color: grey;
