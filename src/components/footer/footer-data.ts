@@ -1,6 +1,6 @@
-import FaceBookIcon from "../../assets/icons/facebook-icon.png";
-import TwitterIcon from "../../assets/icons/twitter-icon.png";
-import InstagramIcon from "../../assets/icons/instagram-icon.png";
+import FaceBookIcon from "../../assets/icons/facebook-fill-icon.png";
+import TwitterIcon from "../../assets/icons/twitter-fill-icon.png";
+import InstagramIcon from "../../assets/icons/google-plus-fill-icon.png";
 
 type LinkDataOptions = {
 	key: number;

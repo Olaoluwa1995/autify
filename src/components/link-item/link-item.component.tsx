@@ -9,7 +9,7 @@ export const linkItemHoverStyles = {
 };
 
 export interface LinkItemProps {
-	children?: any;
+	children: any;
 	url: string;
 	textProps?: BoxProps;
 	className?: string;

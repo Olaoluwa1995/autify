@@ -2,7 +2,7 @@ import React from "react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { Box, Flex } from "@chakra-ui/react";
 
-import { HeaderColoredShapes } from "../shapes/shapes";
+import { HeaderColoredShapes } from "../../assets/shapes/shapes";
 import { headerLinksData } from "./header.data";
 import LinkItem from "../link-item/link-item.component";
 import CustomButton from "../custom-button/custom-button.component";
@@ -36,16 +36,16 @@ const Header = ({ isButtonVisible, marginLeft }: HeaderProps) => {
 					})}
 				</Flex>
 				{isButtonVisible ? (
-					<LinkItem aria-label="request pricing" url="/pricing">
+					<LinkItem aria-label="request pricing" url="/signup">
 						<CustomButton
 							position="absolute"
-							width="180px"
+							width="130px"
 							backgroundColor="white"
 							mt="20px"
 							height="50px"
 							ml="80%">
 							<Box fontSize="17px" fontWeight="500" color="#000">
-								Request Pricing
+								Get Autify
 							</Box>
 							<ArrowForwardIcon
 								fontWeight="bold"

@@ -9,6 +9,7 @@ export const TestimonialsContainer = styled.div`
 	background-color: #9c69e2;
 	border-radius: 50px;
 	margin-top: 80px;
+	max-width: 1120px;
 `;
 
 export const SwiperContainer = styled.div`

@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Flex, Image } from "@chakra-ui/react";
 
 import LinkItem from "../link-item/link-item.component";
-import { FooterColoredShapes } from "../shapes/shapes";
+import { FooterColoredShapes } from "../../assets/shapes/shapes";
 import { middleColumnData } from "./footer-data";
 import { socialIcons } from "./footer-data";
 

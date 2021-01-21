@@ -1,17 +1,17 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import HomePage from "./pages/home/home.component";
-import PricingPage from "./pages/pricing/pricing.component";
+import { CSSReset, ChakraProvider, theme } from "@chakra-ui/react";
 
-import { CSSReset, ChakraProvider } from "@chakra-ui/react";
+import HomePage from "./pages/home/home.component";
+import SignUpPage from "./pages/sign-up/sign-up.component";
 
 function App() {
 	return (
-		<ChakraProvider>
+		<ChakraProvider theme={{ ...theme }}>
 			<CSSReset />
 			<Switch>
+				<Route exact path="/signup" component={SignUpPage} />
 				<Route exact path="/" component={HomePage} />
-				<Route exact path="/pricing" component={PricingPage} />
 			</Switch>
 		</ChakraProvider>
 	);
