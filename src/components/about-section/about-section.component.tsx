@@ -15,11 +15,11 @@ const AboutSection = () => {
 	return (
 		<>
 			<Flex
-				mt="80px"
-				mx="10%"
+				mt={{ base: "60px", sm: "80px" }}
+				mx={{ base: "5%", sm: "10%" }}
 				backgroundColor="rgba(240, 99, 184, 0.15)"
-				borderRadius="50px">
-				<Flex ml="-2.5%" w="50%">
+				borderRadius={{ base: "20px", sm: "50px" }}>
+				<Flex ml="-2.5%" w="50%" display={{ base: "none", sm: "flex" }}>
 					<Image
 						src={AboutSectionImage}
 						alt="about section image"
@@ -28,14 +28,27 @@ const AboutSection = () => {
 					/>
 				</Flex>
 
-				<Flex w="50%" mt="11%" ml="6%" mr="10%" direction="column" mb="10%">
-					<Box as="p" fontSize="35px" fontWeight="bolder" textAlign="start">
+				<Flex
+					w={{ base: "100%", sm: "50%" }}
+					mt="11%"
+					ml="6%"
+					mr={{ base: "6%", sm: "10%" }}
+					direction="column"
+					mb="10%">
+					<Box
+						as="p"
+						fontSize={{ base: "1.8rem", sm: "2rem" }}
+						fontWeight="700"
+						textAlign={{ base: "center", sm: "start" }}>
 						Scale With{" "}
 						<Box as="span" color="#656691">
 							Autify
 						</Box>
 					</Box>
-					<Box as="p" fontSize="17px" textAlign="justify" mt="10%">
+					<Box
+						as="p"
+						textAlign={{ base: "center", sm: "justify" }}
+						mt={{ base: "5%", sm: "10%" }}>
 						{aboutText}
 					</Box>
 				</Flex>

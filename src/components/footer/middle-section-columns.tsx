@@ -8,17 +8,25 @@ import { socialIcons } from "./footer-data";
 
 export const FirstColumn = () => {
 	return (
-		<Flex flexDir="column" width="35%" alignItems="flex-start">
+		<Flex
+			flexDir="column"
+			width={{ base: "100%", sm: "35%" }}
+			ml={{ base: "35%", sm: "0" }}
+			alignItems="flex-start">
 			<Flex flexDir="row">
 				<FooterColoredShapes />
-				<Box fontSize="16px" fontWeight="bold" pl="80%">
+				<Box fontWeight="bold" pl="80%">
 					Autify
 				</Box>
 			</Flex>
-			<Box fontSize="11px" mt="15%">
+			<Box fontSize="0.7rem" mt={{ base: "10px", sm: "25%" }}>
 				Samonda, Ibadan Nigeria
 			</Box>
-			<Box fontSize="12px" mt="15%" fontWeight="bold" textAlign="justify">
+			<Box
+				fontSize="0.75rem"
+				mt={{ base: "15px", sm: "35%" }}
+				fontWeight="bold"
+				textAlign="justify">
 				<Box>info@autify.project</Box>
 				<Box>1-232-3434</Box>
 			</Box>
@@ -30,13 +38,14 @@ export const SecondColumn = () => {
 	return (
 		<Flex
 			flexDir="row"
-			width="35%"
+			width={{ base: "100%", sm: "35%" }}
 			alignItems="flex-start"
-			justifyContent="space-around">
+			mt={{ base: "20px", sm: "0" }}
+			justifyContent={{ base: "space-evenly", sm: "space-around" }}>
 			{middleColumnData.map((column) => {
 				return (
 					<Flex flexDir="column" key={column.key} alignItems="flex-start">
-						<Box fontSize="16px" fontWeight="bold" mb="30px">
+						<Box fontWeight="bold" mb={{ base: "15px", sm: "30px" }}>
 							{column.title}
 						</Box>
 
@@ -47,7 +56,7 @@ export const SecondColumn = () => {
 									flexDir="column"
 									mb="20%"
 									textAlign="justify">
-									<LinkItem url={link.url} fontSize="13px">
+									<LinkItem url={link.url} fontSize="0.8rem">
 										{link.title}
 									</LinkItem>
 								</Flex>
@@ -62,8 +71,12 @@ export const SecondColumn = () => {
 
 export const ThirdColumn = () => {
 	return (
-		<Flex flexDir="column" w="30%" pl="5%">
-			<Box fontSize="16px" fontWeight="bold" mb="30px">
+		<Flex
+			flexDir="column"
+			w={{ base: "100%", sm: "30%" }}
+			pl={{ base: "0", sm: "5%" }}
+			alignItems={{ base: "center", sm: "unset" }}>
+			<Box fontWeight="bold" mb={{ base: "10px", sm: "35px" }}>
 				Social Media
 			</Box>
 			<Flex flexDir="row">

@@ -5,24 +5,46 @@ import ChatIcon from "../../assets/icons/arrow.svg";
 
 export const TestimonialsContainer = styled.div`
 	display: block;
-	margin: 0 10%;
+	margin: 0 2%;
 	background-color: #9c69e2;
-	border-radius: 50px;
-	margin-top: 80px;
+	border-radius: 20px;
+	margin-top: 60px;
 	max-width: 1120px;
+
+	@media (min-width: 768px) {
+		border-radius: 50px;
+		margin: 0 10%;
+		margin-top: 80px;
+	}
 `;
 
-export const SwiperContainer = styled.div`
+export const SwiperDiv = styled.div`
 	display: flex;
-	padding-top: 20%;
+	padding-top: 25%;
 	height: 100%;
 	padding-bottom: 4%;
+
+	@media (min-width: 768px) {
+		padding-top: 15%;
+	}
+
+	@media (min-width: 360px) {
+		padding-top: 18%;
+	}
 `;
 
-export const SwiperDiv = styled(Swiper)`
-	width: 100%;
-	height: 320px;
+export const SwiperContainer = styled(Swiper)`
+	height: 300px;
 	padding-bottom: 3%;
+
+	@media (min-width: 768px) {
+		height: 320px;
+	}
+
+	@media (min-width: 360px) {
+		height: 330px;
+		margin-top: 20px;
+	}
 
 	.swiper-button-next {
 		background-image: url(${ChatIcon}) !important;
@@ -40,6 +62,15 @@ export const SwiperDiv = styled(Swiper)`
 		background-repeat: no-repeat;
 		background-size: 100% auto;
 		background-position: center;
+		margin-left: 74%;
+
+		@media (min-width: 360px) {
+			margin-left: 68%;
+		}
+
+		@media (min-width: 768px) {
+			margin-left: 80%;
+		}
 	}
 
 	.swiper-button-prev::after {
@@ -48,16 +79,27 @@ export const SwiperDiv = styled(Swiper)`
 
 	.swiper-button-prev,
 	.swiper-button-next {
-		color: black;
-		margin-top: 130px;
-		margin-left: 82%;
+		margin-top: 120px;
 		margin-right: 5%;
+
+		@media (min-width: 768px) {
+			margin-top: 130px;
+			margin-left: 80%;
+		}
 	}
 
 	.swiper-pagination {
-		bottom: 0px;
-		width: 20%;
-		--swiper-theme-color: red;
+		--swiper-theme-color: white;
+
+		@media (min-width: 360px) {
+			bottom: 10px;
+			width: 40%;
+		}
+
+		@media (min-width: 768px) {
+			bottom: 0px;
+			width: 30%;
+		}
 	}
 	.swiper-wrapper {
 		padding: 0;
@@ -69,7 +111,11 @@ export const SwiperDiv = styled(Swiper)`
 `;
 
 export const SlideContainer = styled.div`
-	border-radius: 50px;
+	border-radius: 20px;
 	background-color: white;
 	box-shadow: 0 15px 8px 0 #803cde;
+
+	@media (min-width: 360px) {
+		margin-top: 10px;
+	}
 `;

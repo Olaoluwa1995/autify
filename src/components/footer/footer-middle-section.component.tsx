@@ -8,7 +8,7 @@ import {
 
 const MiddleSection = () => {
 	return (
-		<Flex flexDir="row" mt="6%" color="#212353">
+		<Flex flexDir={{ base: "column", sm: "row" }} mt="6%" color="#212353">
 			<FirstColumn />
 			<SecondColumn />
 			<ThirdColumn />

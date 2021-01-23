@@ -8,7 +8,11 @@ import BelowSection from "./footer-below-section.component";
 const Footer = () => {
 	return (
 		<>
-			<Flex position="relative" flexDir="column" mx="10%" mb="3%">
+			<Flex
+				position="relative"
+				flexDir="column"
+				mx={{ base: "2%", sm: "10%" }}
+				mb="3%">
 				<AboveSection />
 				<MiddleSection />
 				<BelowSection />

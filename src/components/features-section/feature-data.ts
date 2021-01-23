@@ -6,6 +6,7 @@ import SecurityFeatureImage from "../../assets/images/security-feature.png";
 type FeatureProps = {
 	key: number;
 	marginTop?: string;
+	mobileMarginTop?: string;
 	marginXAxis: string;
 	ariaLabel: string;
 	url: string;
@@ -26,6 +27,7 @@ export const featuresData: FeatureProps[] = [
 		key: 2,
 		src: AccessFeatureImage,
 		marginTop: "20px",
+		mobileMarginTop: "22px",
 		ariaLabel: "access feature",
 		url: "#",
 		marginXAxis: `${marginXAxis}`,
@@ -41,6 +43,7 @@ export const featuresData: FeatureProps[] = [
 	{
 		key: 4,
 		src: SecurityFeatureImage,
+		mobileMarginTop: "20px",
 		ariaLabel: "security feature",
 		url: "#",
 		marginXAxis: `${marginXAxis}`,

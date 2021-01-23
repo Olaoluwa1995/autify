@@ -4,8 +4,8 @@ import ButtonLoader from "./button-loader/button-loader.component";
 
 export type CustomButtonProps = {
 	to?: string;
-	width: string;
-	height: string;
+	width: string | object;
+	height: string | object;
 	backgroundColor: string;
 } & ButtonProps;
 

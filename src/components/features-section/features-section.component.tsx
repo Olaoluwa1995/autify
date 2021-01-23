@@ -11,20 +11,33 @@ const FeaturesSection = () => {
 
 	return (
 		<>
-			<Flex mt="50px" mx="10%" direction="column" textAlign="center">
-				<Box fontSize="35px" fontWeight="bolder" color="#212353">
+			<Flex
+				mt={{ base: "30px", sm: "50px" }}
+				mx={{ base: "2%", sm: "10%" }}
+				direction="column"
+				textAlign="center">
+				<Box
+					fontSize={{ base: "2rem", sm: "2.5rem" }}
+					fontWeight="bolder"
+					color="#212353">
 					Features
 				</Box>
-				<Box fontSize="18px" mt="25px" mx="20%">
+				<Box
+					fontSize={{ base: "1rem", sm: "1.1rem" }}
+					mt={{ base: "15px", sm: "25px" }}
+					mx={{ base: "5%", sm: "20%" }}>
 					{featuresText}
 				</Box>
-				<Flex flexWrap="wrap" mt="25px">
+				<Flex flexWrap="wrap" mt={{ base: "10px", sm: "25px" }}>
 					{featuresData.map((feature) => {
 						return (
 							<Box
 								key={feature.key}
-								w="46%"
-								mt={feature.marginTop}
+								w={{ base: "100%", sm: "46%" }}
+								mt={{
+									base: `${feature.mobileMarginTop}`,
+									sm: `${feature.marginTop}`,
+								}}
 								mx={feature.marginXAxis}>
 								<Feature
 									ariaLabel={feature.ariaLabel}
