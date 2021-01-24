@@ -1,6 +1,7 @@
 import { IconButton } from "@chakra-ui/react";
 import React from "react";
-import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
+import { BiHide, BiShow } from "react-icons/bi";
+import { COLORS } from "../../styles/theme";
 
 type Props = {
 	showPassword: boolean;
@@ -26,9 +27,11 @@ const PasswordToggler: React.FC<Props> = ({
 			border: "none",
 		}}
 		isRound
-		color="white"
+		color={COLORS.PRIMARY_COLOR}
 		aria-label={showPassword ? "hide password" : "show password"}
-		icon={showPassword ? <ViewOffIcon h={6} w={6} /> : <ViewIcon h={6} w={6} />}
+		icon={
+			showPassword ? <BiHide fontSize="1.8rem" /> : <BiShow fontSize="1.8rem" />
+		}
 		onClick={onShowPassword}
 		background="primary-color-light"
 		w="30px"

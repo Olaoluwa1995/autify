@@ -8,7 +8,12 @@ type SlideContentProps = {
 	title: string;
 	description: string;
 };
-const SlideContent = ({ name, src, title, description }: SlideContentProps) => {
+const SlideContent: React.FC<SlideContentProps> = ({
+	name,
+	src,
+	title,
+	description,
+}) => {
 	return (
 		<>
 			<SlideContainer>

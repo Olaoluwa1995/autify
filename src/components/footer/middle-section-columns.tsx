@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Image } from "@chakra-ui/react";
+import { Box, Flex, Icon } from "@chakra-ui/react";
 
 import LinkItem from "../link-item/link-item.component";
 import { FooterColoredShapes } from "../../assets/shapes/shapes";
@@ -79,11 +79,16 @@ export const ThirdColumn = () => {
 			<Box fontWeight="bold" mb={{ base: "0.7rem", sm: "1.7rem" }}>
 				Social Media
 			</Box>
-			<Flex flexDir="row">
+			<Flex flexDir="row" as="nav" align="center">
 				{socialIcons.map((icon) => {
 					return (
-						<LinkItem isAnchor key={icon.key} url={icon.url} mr="2%">
-							<Image src={icon.src} alt={icon.name} w="40px" minW="30px" />
+						<LinkItem isAnchor key={icon.key} url={icon.url} mr="0.3rem">
+							<Icon
+								as={icon.as}
+								alt={icon.name}
+								fontSize={icon.homeFont}
+								fill={icon.fill}
+							/>
 						</LinkItem>
 					);
 				})}

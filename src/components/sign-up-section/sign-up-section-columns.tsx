@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Checkbox, Flex, Image } from "@chakra-ui/react";
+import { Box, Checkbox, Flex, Icon, Image } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 import CustomButton from "../custom-button/custom-button.component";
@@ -96,11 +96,16 @@ export const RightColumn = () => {
 					mt="10%"
 				/>
 			</Flex>
-			<Flex flexDir="row" mt="10px">
+			<Flex flexDir="row" mt="0.7rem" align="center">
 				{socialIcons.map((icon) => {
 					return (
-						<LinkItem isAnchor key={icon.key} url={icon.url} mr="8%">
-							<Image src={icon.src} alt={icon.name} minW="35px" />
+						<LinkItem isAnchor key={icon.key} url={icon.url} mr="0.2rem">
+							<Icon
+								as={icon.as}
+								alt={icon.name}
+								fill={icon.fill}
+								fontSize={icon.signupFont}
+							/>
 						</LinkItem>
 					);
 				})}

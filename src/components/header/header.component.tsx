@@ -2,12 +2,20 @@ import React from "react";
 import { ArrowForwardIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
 	Box,
+	Drawer,
+	DrawerBody,
+	DrawerOverlay,
+	DrawerContent,
+	DrawerCloseButton,
+	Divider,
 	Flex,
-	Menu,
-	MenuButton,
-	MenuList,
-	MenuItem,
+	FlexboxProps,
+	List,
+	ListIcon,
+	ListItem,
+	useDisclosure,
 } from "@chakra-ui/react";
+import { FaSignOutAlt } from "react-icons/fa";
 
 import { HeaderColoredShapes } from "../../assets/shapes/shapes";
 import { headerLinksData } from "./header.data";
@@ -15,11 +23,16 @@ import NavLinkItem from "../link-item/header-links.component";
 import CustomButton from "../custom-button/custom-button.component";
 import { COLORS } from "../../styles/theme";
 
-type HeaderProps = {
+type HeaderComponentProps = {
 	isButtonVisible: boolean;
+	flexDir: string;
 };
 
-const Header: React.FC<HeaderProps> = ({ isButtonVisible }) => {
+type HeaderProps = HeaderComponentProps & FlexboxProps;
+
+const Header: React.FC<HeaderProps> = ({ isButtonVisible, flexDir }) => {
+	const { isOpen, onOpen, onClose } = useDisclosure();
+
 	return (
 		<>
 			<Flex
@@ -27,26 +40,40 @@ const Header: React.FC<HeaderProps> = ({ isButtonVisible }) => {
 				mx={{ base: "2%", sm: "10%" }}
 				mt="1rem"
 				align="center"
-				justify="space-between">
+				justify="space-between"
+				flexDir={flexDir}>
 				<Box display={{ base: "flex", sm: "none" }}>
-					<Menu isLazy>
-						<MenuButton>
-							<HamburgerIcon w={8} h={8} />
-						</MenuButton>
-						<MenuList minW="8rem">
-							{headerLinksData.map((headerLink: any) => {
-								return (
-									<MenuItem key={headerLink.key}>
-										<NavLinkItem
-											aria-label={headerLink.title}
-											url={headerLink.url}>
-											{headerLink.title}
-										</NavLinkItem>
-									</MenuItem>
-								);
-							})}
-						</MenuList>
-					</Menu>
+					<HamburgerIcon as="button" w={8} h={8} onClick={onOpen} />
+					<Drawer isOpen={isOpen} placement="left" onClose={onClose} size="xs">
+						<DrawerOverlay>
+							<DrawerContent bgColor="whitesmoke">
+								<DrawerCloseButton />
+								<DrawerBody px="0" pt="3rem">
+									<List>
+										{headerLinksData.map((headerLink: any) => {
+											return (
+												<ListItem key={headerLink.key}>
+													<ListIcon
+														as={FaSignOutAlt}
+														color={COLORS.PRIMARY_COLOR}
+														h="1.2rem"
+														mx="0.5rem"
+													/>
+													<NavLinkItem
+														aria-label={headerLink.title}
+														url={headerLink.url}
+														fontSize="1.2rem">
+														{headerLink.title}
+													</NavLinkItem>
+													<Divider my="0.5rem" />
+												</ListItem>
+											);
+										})}
+									</List>
+								</DrawerBody>
+							</DrawerContent>
+						</DrawerOverlay>
+					</Drawer>
 				</Box>
 				<NavLinkItem aria-label="homepage" url="/">
 					<HeaderColoredShapes />

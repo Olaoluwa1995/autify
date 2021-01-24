@@ -1,6 +1,5 @@
-import FaceBookIcon from "../../assets/icons/facebook-fill-icon.png";
-import TwitterIcon from "../../assets/icons/twitter-fill-icon.png";
-import InstagramIcon from "../../assets/icons/google-plus-fill-icon.png";
+import { FaFacebook, FaGooglePlus } from "react-icons/fa";
+import { AiFillTwitterCircle } from "react-icons/ai";
 
 type LinkDataOptions = {
 	key: number;
@@ -77,27 +76,39 @@ export const middleColumnData: ColumnData[] = [
 type SocialIconsOptions = {
 	key: number;
 	name: string;
-	src: string;
+	as: any;
+	fill: string;
 	url: string;
+	homeFont?: string;
+	signupFont?: string;
 };
 
 export const socialIcons: SocialIconsOptions[] = [
 	{
 		key: 1,
 		name: "facebook",
-		src: FaceBookIcon,
+		as: FaFacebook,
 		url: "#",
+		fill: "#5096FE",
+		homeFont: "2rem",
+		signupFont: "1.2rem",
 	},
 	{
 		key: 2,
 		name: "twitter",
-		src: TwitterIcon,
+		as: AiFillTwitterCircle,
 		url: "#",
+		fill: "#7EF0F8",
+		homeFont: "2.35rem",
+		signupFont: "1.3rem",
 	},
 	{
 		key: 3,
-		name: "instagram",
-		src: InstagramIcon,
+		name: "google plus",
+		as: FaGooglePlus,
 		url: "#",
+		fill: "#FF4747",
+		homeFont: "2rem",
+		signupFont: "1.2rem",
 	},
 ];

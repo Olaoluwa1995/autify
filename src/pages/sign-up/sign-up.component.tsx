@@ -14,7 +14,7 @@ const SignUpPage = () => {
 				bgGradient="linear(to-b, #68C9BA, #FFFFFF)"
 				h="350px"
 				mb="700px">
-				<Header isButtonVisible={false} />
+				<Header isButtonVisible={false} flexDir="row-reverse" />
 				<SignUpSection />
 			</Flex>
 			<Divider />

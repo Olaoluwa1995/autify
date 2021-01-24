@@ -4,7 +4,7 @@ import { Box, Flex, Image } from "@chakra-ui/react";
 import AboutSectionImage from "../../assets/images/about.png";
 import { COLORS } from "../../styles/theme";
 
-const AboutSection = () => {
+const ScaleSection = () => {
 	const aboutText = `
     The place to store various data that you can access at 
     any time through the internet  and where you can carry it. 
@@ -59,4 +59,4 @@ const AboutSection = () => {
 	);
 };
 
-export default AboutSection;
+export default ScaleSection;

@@ -21,8 +21,8 @@ const BannerSection = () => {
 					textAlign={{ base: "center", sm: "justify" }}
 					w={{ base: "100%", sm: "40%" }}>
 					<Box fontSize={{ base: "1.6rem", md: "2.5rem" }} fontWeight="900">
-						<Box as="h1">Do More With</Box>
-						<Box as="h1" color={COLORS.AUTIFY_COLOR}>
+						<Box as="h2">Do More With</Box>
+						<Box as="h2" color={COLORS.AUTIFY_COLOR}>
 							Autify
 						</Box>
 					</Box>
