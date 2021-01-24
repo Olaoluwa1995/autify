@@ -5,10 +5,14 @@ import {
 	SecondColumn,
 	ThirdColumn,
 } from "./middle-section-columns";
+import { COLORS } from "../../styles/theme";
 
 const MiddleSection = () => {
 	return (
-		<Flex flexDir={{ base: "column", sm: "row" }} mt="6%" color="#212353">
+		<Flex
+			flexDir={{ base: "column", sm: "row" }}
+			mt="3rem"
+			color={COLORS.DEEP_BLUE}>
 			<FirstColumn />
 			<SecondColumn />
 			<ThirdColumn />

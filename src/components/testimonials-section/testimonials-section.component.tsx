@@ -6,8 +6,12 @@ import "swiper/swiper-bundle.css";
 
 import OverlayImage from "../../assets/images/testimonial-overlay.png";
 import UnderlayImage from "../../assets/images/testimonial-underlay.png";
-import { TestimonialsContainer } from "./testimonials-section.styles.d";
-import { SwiperContainer, SwiperDiv } from "./testimonials-section.styles.d";
+import {
+	ImageContainer,
+	SwiperContainer,
+	SwiperDiv,
+	TestimonialsContainer,
+} from "./testimonials-section.styles.d";
 import { slides } from "./testimonials-data";
 import SlideContent from "./slide-content";
 
@@ -16,17 +20,15 @@ SwiperCore.use([Navigation, Pagination, Autoplay]);
 const TestimonialsSection = () => {
 	return (
 		<>
-			<TestimonialsContainer>
-				<Box
-					pt={{ base: "15px", sm: "20px" }}
-					w={{ base: "96%", md: "80%" }}
-					position="absolute">
+			<TestimonialsContainer as="section">
+				<ImageContainer pt={{ base: "1rem", sm: "1.2rem" }}>
 					<Image src={UnderlayImage} alt="underlay image" />
-				</Box>
-				<Box w={{ base: "96%", md: "80%" }} position="absolute">
+				</ImageContainer>
+				<ImageContainer>
 					<Image src={OverlayImage} alt="overlay image" />
-				</Box>
+				</ImageContainer>
 				<Box
+					as="h2"
 					position="absolute"
 					fontSize={{ base: "1.5rem", sm: "2.5rem" }}
 					fontWeight="bold"

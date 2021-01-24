@@ -7,9 +7,9 @@ type FeatureProps = {
 	ariaLabel: string;
 	url: string;
 };
-const Feature = ({ src, ariaLabel, url }: FeatureProps) => {
+const Feature: React.FC<FeatureProps> = ({ src, ariaLabel, url }) => {
 	return (
-		<LinkItem aria-label={ariaLabel} url={url}>
+		<LinkItem isAnchor aria-label={ariaLabel} url={url}>
 			<Image src={src} w="100%" alt={ariaLabel} />
 		</LinkItem>
 	);

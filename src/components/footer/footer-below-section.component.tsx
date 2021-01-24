@@ -10,7 +10,7 @@ const BelowBelSection = () => {
 			<Box fontSize="0.655rem" mt="20px">
 				© Autify™, 2020. All rights reserved.
 			</Box>
-			<LinkItem url="#">
+			<LinkItem isAnchor url="#">
 				<Image src={ChatImage} alt="chat" w="45px" />
 			</LinkItem>
 		</Flex>

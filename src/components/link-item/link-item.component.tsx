@@ -1,41 +1,24 @@
-import { Box, BoxProps, Flex, Icon, LinkBoxProps } from "@chakra-ui/react";
+import { Box, BoxProps, LinkBoxProps } from "@chakra-ui/react";
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { underline } from "../../styles/theme";
-
-export const linkItemHoverStyles = {
-	animation: `${underline} 0.2s linear`,
-	w: "100%",
-};
+import { COLORS } from "../../styles/theme";
 
 export interface LinkItemProps {
-	children: any;
-	url: string;
-	textProps?: BoxProps;
-	className?: string;
 	isLink?: boolean;
-	isAnchor?: boolean;
-	underline?: boolean;
+	isAnchor: boolean;
+	url: any;
+	children: any;
 	hoverStyles?: BoxProps;
-	underlineProps?: BoxProps;
 	hoverProps?: BoxProps;
-	smooth?: boolean;
-	icon?: any;
 }
 
 export type LinkProps = LinkItemProps & BoxProps & LinkBoxProps;
 
 const LinkItem: React.FC<LinkProps> = ({
+	isLink = true,
+	isAnchor = true,
 	children,
 	url,
-	icon,
-	isLink = false,
-	isAnchor = false,
-	className = "",
-	hoverStyles = linkItemHoverStyles,
-	textProps,
-	underline = false,
-	underlineProps,
 	hoverProps,
 	...otherProps
 }) => {
@@ -43,32 +26,13 @@ const LinkItem: React.FC<LinkProps> = ({
 		<Box
 			as={isAnchor ? "a" : isLink ? Link : NavLink}
 			{...(isAnchor ? { href: url } : { to: url })}
+			to={url}
 			fontSize={{ base: "0.9rem", lg: "1rem" }}
 			textDecoration="none"
 			_hover={{ textDecoration: "none", color: "inherit", ...hoverProps }}
-			role="group"
-			zIndex={2}
-			color="#9c69e2"
-			className={className}
+			color={COLORS.PRIMARY_COLOR}
 			{...otherProps}>
-			<Flex as="span" {...textProps}>
-				{icon && <Icon as={icon} />}
-				{children}
-			</Flex>
-
-			{underline && (
-				<Box
-					h="3px"
-					background="red"
-					w="0%"
-					borderRadius="50px"
-					position="relative"
-					top="5px"
-					mx="auto"
-					{...underlineProps}
-					_groupHover={hoverStyles}
-				/>
-			)}
+			{children}
 		</Box>
 	);
 };

@@ -9,7 +9,6 @@ const footerShapesWidth = "15px";
 export const FirstHeaderColoredShape = styled.div`
 	width: ${headerShapesWidth};
 	height: ${headerShapesWidth};
-	margin-top: 45px;
 
 	background: ${firstShapeColor};
 	border-radius: ${borderRadius};
@@ -19,7 +18,6 @@ export const SecondHeaderColoredShape = styled.div`
 	width: ${headerShapesWidth};
 	height: 35px;
 	margin-left: 5px;
-	margin-top: 30px;
 
 	background: ${secondShapeColor};
 	border-radius: ${borderRadius};

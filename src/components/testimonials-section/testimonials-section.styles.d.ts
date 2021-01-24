@@ -1,20 +1,26 @@
 import styled from "styled-components";
 import { Swiper } from "swiper/react";
+import { Box } from "@chakra-ui/react";
 
 import ChatIcon from "../../assets/icons/arrow.svg";
+import { COLORS } from "../../styles/theme";
 
 export const TestimonialsContainer = styled.div`
 	display: block;
 	margin: 0 2%;
-	background-color: #9c69e2;
+	background-color: ${COLORS.PRIMARY_COLOR};
 	border-radius: 20px;
-	margin-top: 60px;
+	margin-top: 4.5rem;
 	max-width: 1120px;
+
+	@media (min-width: 360px) {
+		margin: 0 10%;
+		margin-top: 4.5rem;
+	}
 
 	@media (min-width: 768px) {
 		border-radius: 50px;
-		margin: 0 10%;
-		margin-top: 80px;
+		margin-top: 5rem;
 	}
 `;
 
@@ -24,26 +30,24 @@ export const SwiperDiv = styled.div`
 	height: 100%;
 	padding-bottom: 4%;
 
-	@media (min-width: 768px) {
-		padding-top: 15%;
-	}
-
 	@media (min-width: 360px) {
 		padding-top: 18%;
+	}
+	@media (min-width: 768px) {
+		padding-top: 15%;
 	}
 `;
 
 export const SwiperContainer = styled(Swiper)`
-	height: 300px;
+	height: 330px;
 	padding-bottom: 3%;
 
-	@media (min-width: 768px) {
-		height: 320px;
-	}
-
 	@media (min-width: 360px) {
-		height: 330px;
+		height: 350px;
 		margin-top: 20px;
+	}
+	@media (min-width: 768px) {
+		height: 360px;
 	}
 
 	.swiper-button-next {
@@ -79,12 +83,11 @@ export const SwiperContainer = styled(Swiper)`
 
 	.swiper-button-prev,
 	.swiper-button-next {
-		margin-top: 120px;
+		margin-top: 8rem;
 		margin-right: 5%;
 
 		@media (min-width: 768px) {
-			margin-top: 130px;
-			margin-left: 80%;
+			margin-top: 9rem;
 		}
 	}
 
@@ -117,5 +120,14 @@ export const SlideContainer = styled.div`
 
 	@media (min-width: 360px) {
 		margin-top: 10px;
+	}
+`;
+
+export const ImageContainer = styled(Box)`
+	position: absolute;
+	width: 96%;
+
+	@media (min-width: 360px) {
+		width: 80%;
 	}
 `;

@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Flex, Image } from "@chakra-ui/react";
 
 import AboutSectionImage from "../../assets/images/about.png";
+import { COLORS } from "../../styles/theme";
 
 const AboutSection = () => {
 	const aboutText = `
@@ -15,6 +16,7 @@ const AboutSection = () => {
 	return (
 		<>
 			<Flex
+				as="section"
 				mt={{ base: "60px", sm: "80px" }}
 				mx={{ base: "5%", sm: "10%" }}
 				backgroundColor="rgba(240, 99, 184, 0.15)"
@@ -36,12 +38,12 @@ const AboutSection = () => {
 					direction="column"
 					mb="10%">
 					<Box
-						as="p"
+						as="h2"
 						fontSize={{ base: "1.8rem", sm: "2rem" }}
 						fontWeight="700"
 						textAlign={{ base: "center", sm: "start" }}>
 						Scale With{" "}
-						<Box as="span" color="#656691">
+						<Box as="span" color={COLORS.AUTIFY_COLOR}>
 							Autify
 						</Box>
 					</Box>

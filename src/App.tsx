@@ -4,10 +4,11 @@ import { CSSReset, ChakraProvider, theme } from "@chakra-ui/react";
 
 import HomePage from "./pages/home/home.component";
 import SignUpPage from "./pages/sign-up/sign-up.component";
+import { customTheme } from "./styles/theme";
 
 function App() {
 	return (
-		<ChakraProvider theme={{ ...theme }}>
+		<ChakraProvider theme={{ ...theme, ...customTheme }}>
 			<CSSReset />
 			<Switch>
 				<Route exact path="/signup" component={SignUpPage} />

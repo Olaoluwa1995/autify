@@ -19,12 +19,12 @@ export const FirstColumn = () => {
 					Autify
 				</Box>
 			</Flex>
-			<Box fontSize="0.7rem" mt={{ base: "10px", sm: "25%" }}>
+			<Box fontSize="0.7rem" mt={{ base: "0.7rem", sm: "2.5rem" }}>
 				Samonda, Ibadan Nigeria
 			</Box>
 			<Box
 				fontSize="0.75rem"
-				mt={{ base: "15px", sm: "35%" }}
+				mt={{ base: "1rem", sm: "3rem" }}
 				fontWeight="bold"
 				textAlign="justify">
 				<Box>info@autify.project</Box>
@@ -40,12 +40,12 @@ export const SecondColumn = () => {
 			flexDir="row"
 			width={{ base: "100%", sm: "35%" }}
 			alignItems="flex-start"
-			mt={{ base: "20px", sm: "0" }}
+			mt={{ base: "1.3rem", sm: "0" }}
 			justifyContent={{ base: "space-evenly", sm: "space-around" }}>
 			{middleColumnData.map((column) => {
 				return (
 					<Flex flexDir="column" key={column.key} alignItems="flex-start">
-						<Box fontWeight="bold" mb={{ base: "15px", sm: "30px" }}>
+						<Box fontWeight="bold" mb={{ base: "1rem", sm: "2rem" }}>
 							{column.title}
 						</Box>
 
@@ -54,9 +54,9 @@ export const SecondColumn = () => {
 								<Flex
 									key={link.key}
 									flexDir="column"
-									mb="20%"
+									mb="0.7rem"
 									textAlign="justify">
-									<LinkItem url={link.url} fontSize="0.8rem">
+									<LinkItem isAnchor url={link.url} fontSize="0.8rem">
 										{link.title}
 									</LinkItem>
 								</Flex>
@@ -76,13 +76,13 @@ export const ThirdColumn = () => {
 			w={{ base: "100%", sm: "30%" }}
 			pl={{ base: "0", sm: "5%" }}
 			alignItems={{ base: "center", sm: "unset" }}>
-			<Box fontWeight="bold" mb={{ base: "10px", sm: "35px" }}>
+			<Box fontWeight="bold" mb={{ base: "0.7rem", sm: "1.7rem" }}>
 				Social Media
 			</Box>
 			<Flex flexDir="row">
 				{socialIcons.map((icon) => {
 					return (
-						<LinkItem key={icon.key} url={icon.url} mr="2%">
+						<LinkItem isAnchor key={icon.key} url={icon.url} mr="2%">
 							<Image src={icon.src} alt={icon.name} w="40px" minW="30px" />
 						</LinkItem>
 					);

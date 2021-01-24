@@ -11,24 +11,25 @@ import {
 
 import { HeaderColoredShapes } from "../../assets/shapes/shapes";
 import { headerLinksData } from "./header.data";
-import LinkItem from "../link-item/link-item.component";
+import NavLinkItem from "../link-item/header-links.component";
 import CustomButton from "../custom-button/custom-button.component";
+import { COLORS } from "../../styles/theme";
 
 type HeaderProps = {
 	isButtonVisible: boolean;
-	marginLeft: string;
 };
 
-const Header = ({ isButtonVisible, marginLeft }: HeaderProps) => {
+const Header: React.FC<HeaderProps> = ({ isButtonVisible }) => {
 	return (
 		<>
-			<Flex position="relative" mx={{ base: "2%", sm: "10%" }} mb="10px">
-				<Box
-					mt="35px"
-					pl="2%"
-					display={{ base: "flex", sm: "none" }}
-					position="absolute">
-					<Menu>
+			<Flex
+				as="header"
+				mx={{ base: "2%", sm: "10%" }}
+				mt="1rem"
+				align="center"
+				justify="space-between">
+				<Box display={{ base: "flex", sm: "none" }}>
+					<Menu isLazy>
 						<MenuButton>
 							<HamburgerIcon w={8} h={8} />
 						</MenuButton>
@@ -36,62 +37,53 @@ const Header = ({ isButtonVisible, marginLeft }: HeaderProps) => {
 							{headerLinksData.map((headerLink: any) => {
 								return (
 									<MenuItem key={headerLink.key}>
-										<LinkItem
+										<NavLinkItem
 											aria-label={headerLink.title}
 											url={headerLink.url}>
 											{headerLink.title}
-										</LinkItem>
+										</NavLinkItem>
 									</MenuItem>
 								);
 							})}
 						</MenuList>
 					</Menu>
 				</Box>
-				<LinkItem aria-label="homepage" url="/" ml={{ base: "50%", sm: "0%" }}>
+				<NavLinkItem aria-label="homepage" url="/">
 					<HeaderColoredShapes />
-				</LinkItem>
+				</NavLinkItem>
 				<Flex
-					as="header"
+					as="nav"
 					display={{ base: "none", sm: "flex" }}
-					position="absolute"
 					direction="row"
-					ml={marginLeft}
-					mt="35px">
+					align="center">
 					{headerLinksData.map((headerLink: any) => {
 						return (
 							<Box key={headerLink.key} ml="15%">
-								<LinkItem aria-label={headerLink.title} url={headerLink.url}>
+								<NavLinkItem aria-label={headerLink.title} url={headerLink.url}>
 									{headerLink.title}
-								</LinkItem>
+								</NavLinkItem>
 							</Box>
 						);
 					})}
 				</Flex>
 				{isButtonVisible ? (
-					<LinkItem
-						aria-label="signup"
-						url="/signup"
-						ml={{ base: "20%", sm: "80%" }}>
-						<CustomButton
-							position="absolute"
-							width={{ base: "100px", sm: "130px" }}
-							backgroundColor="white"
-							mt={{ base: "25px", sm: "20px" }}
-							height={{ base: "40px", sm: "50px" }}>
-							<Box
-								fontSize={{ base: "0.8rem", sm: "1.2rem" }}
-								fontWeight="500"
-								color="#000">
+					<CustomButton
+						maxWidth={{ base: "130px" }}
+						w="100%"
+						backgroundColor={COLORS.WHITE}
+						height={{ base: "40px", sm: "50px" }}>
+						<Box fontSize={{ base: "0.8rem", sm: "1.2rem" }} fontWeight="bold">
+							<NavLinkItem aria-label="signup" url="/signup" color="#000">
 								Get Autify
-							</Box>
-							<ArrowForwardIcon
-								fontWeight="bold"
-								fontSize="20px"
-								color="#9c69e2"
-								mt="3px"
-							/>
-						</CustomButton>
-					</LinkItem>
+							</NavLinkItem>
+						</Box>
+						<ArrowForwardIcon
+							fontWeight="bold"
+							fontSize="20px"
+							color={COLORS.PRIMARY_COLOR}
+							mt="3px"
+						/>
+					</CustomButton>
 				) : null}
 			</Flex>
 		</>

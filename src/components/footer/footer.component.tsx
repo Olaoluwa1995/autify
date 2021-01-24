@@ -9,10 +9,11 @@ const Footer = () => {
 	return (
 		<>
 			<Flex
+				as="footer"
 				position="relative"
 				flexDir="column"
 				mx={{ base: "2%", sm: "10%" }}
-				mb="3%">
+				mb="1rem">
 				<AboveSection />
 				<MiddleSection />
 				<BelowSection />

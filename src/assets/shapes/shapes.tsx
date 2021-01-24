@@ -11,7 +11,7 @@ import {
 export const HeaderColoredShapes = () => {
 	return (
 		<>
-			<Flex direction="row" position="absolute">
+			<Flex direction="row" align="flex-end">
 				<FirstHeaderColoredShape />
 				<SecondHeaderColoredShape />
 			</Flex>

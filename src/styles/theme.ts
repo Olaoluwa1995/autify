@@ -1,6 +1,52 @@
-import { keyframes } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
+import { Styles } from "@chakra-ui/theme-tools";
 
-export const underline = keyframes`
-  from { width: 0; background: 'white'}
-  to { width: "60%"; background: 'red' }
-`;
+export const COLORS = {
+	PRIMARY_COLOR: "#9c69e2",
+	DEEP_BLUE: "#212353",
+	WHITE: "#ffffff",
+	AUTIFY_COLOR: "#656691",
+};
+
+const STYLES: Styles = {
+	global: {
+		"*": {
+			boxSizing: "border-box",
+		},
+
+		html: {
+			minH: "100%",
+			overflowX: "hidden",
+		},
+
+		body: {
+			display: "flex",
+			flexDir: "column",
+			overflowX: "hidden",
+			color: "black",
+
+			"#root": {
+				"* .roboto": {
+					fontFamily: "'Poppins', sans-serif",
+				},
+			},
+		},
+
+		"#root": {
+			minH: "100vh",
+			display: "flex",
+			flexDirection: "column",
+			width: "100%",
+			pos: "relative",
+
+			"*": {
+				fontFamily: "'Poppins'",
+			},
+		},
+	},
+};
+
+export const customTheme = extendTheme({
+	styles: STYLES,
+	colors: COLORS,
+});

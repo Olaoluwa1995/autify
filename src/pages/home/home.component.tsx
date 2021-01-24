@@ -13,7 +13,7 @@ const HomePage = () => {
 	return (
 		<>
 			<Flex direction="column" bgGradient="linear(to-b, #68C9BA, #FFFFFF)">
-				<Header marginLeft="20%" isButtonVisible={true} />
+				<Header isButtonVisible />
 				<BannerSection />
 			</Flex>
 			<AboutSection />

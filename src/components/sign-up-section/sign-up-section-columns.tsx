@@ -5,26 +5,28 @@ import { Link } from "react-router-dom";
 import CustomButton from "../custom-button/custom-button.component";
 
 import LinkItem from "../link-item/link-item.component";
+import NavLinkItem from "../link-item/header-links.component";
 import HomeIcon from "../../assets/icons/home-icon.png";
 import LineIcon from "../../assets/icons/line-icon.png";
 import FormInput from "../form-input/form-input.component";
 import { socialIcons } from "../footer/footer-data";
+import { COLORS } from "../../styles/theme";
 
 export const LeftColumn = () => {
 	return (
 		<Flex
 			w="50%"
 			borderRadius="30px"
-			bgGradient="linear(to-b,#9C69E2, #ccc6d3)"
+			bgGradient={`linear(to-b, ${COLORS.PRIMARY_COLOR}, #ccc6d3)`}
 			flexDir="column"
 			color="white">
 			<Flex flexDir="row" mt="15px" ml="20px">
-				<LinkItem url="/" color="white">
+				<NavLinkItem url="/" color="white">
 					<Image src={HomeIcon} alt="home" w="20px" />
 					<Box fontSize="16px" ml="5px">
 						Home
 					</Box>
-				</LinkItem>
+				</NavLinkItem>
 			</Flex>
 			<Flex flexDir="column" mt="150px" alignItems="center">
 				<Box fontSize="180%" fontWeight="660" textAlign="center">
@@ -97,7 +99,7 @@ export const RightColumn = () => {
 			<Flex flexDir="row" mt="10px">
 				{socialIcons.map((icon) => {
 					return (
-						<LinkItem key={icon.key} url={icon.url} mr="8%">
+						<LinkItem isAnchor key={icon.key} url={icon.url} mr="8%">
 							<Image src={icon.src} alt={icon.name} minW="35px" />
 						</LinkItem>
 					);
