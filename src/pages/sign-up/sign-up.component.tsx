@@ -15,6 +15,7 @@ const SignUpPage = () => {
 				h="20rem"
 				mb={{ base: "32rem", sm: "38rem" }}>
 				<Header
+					as="header"
 					isButtonVisible={false}
 					flexDir={{ base: "row-reverse", sm: "row" }}
 				/>

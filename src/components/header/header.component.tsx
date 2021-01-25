@@ -24,18 +24,19 @@ import { COLORS } from "../../styles/theme";
 
 type HeaderComponentProps = {
 	isButtonVisible: boolean;
+	as: any;
 	flexDir: string | object;
 };
 
 type HeaderProps = HeaderComponentProps & FlexboxProps;
 
-const Header: React.FC<HeaderProps> = ({ isButtonVisible, flexDir }) => {
+const Header: React.FC<HeaderProps> = ({ isButtonVisible, flexDir, as }) => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 
 	return (
 		<>
 			<Flex
-				as="section"
+				as={as}
 				mx={{ base: "2%", sm: "10%" }}
 				mt="1rem"
 				align="center"

@@ -16,7 +16,7 @@ const HomePage = () => {
 				as="header"
 				flexDir="column"
 				bgGradient="linear(to-b, #68C9BA, #FFFFFF)">
-				<Header isButtonVisible flexDir="row" />
+				<Header as="section" isButtonVisible flexDir="row" />
 				<BannerSection />
 			</Flex>
 			<Flex as="main" flexDir="column">
