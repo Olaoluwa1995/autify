@@ -15,7 +15,6 @@ import {
 	ListItem,
 	useDisclosure,
 } from "@chakra-ui/react";
-import { FaSignOutAlt } from "react-icons/fa";
 
 import { HeaderColoredShapes } from "../../assets/shapes/shapes";
 import { headerLinksData } from "./header.data";
@@ -25,7 +24,7 @@ import { COLORS } from "../../styles/theme";
 
 type HeaderComponentProps = {
 	isButtonVisible: boolean;
-	flexDir: string;
+	flexDir: string | object;
 };
 
 type HeaderProps = HeaderComponentProps & FlexboxProps;
@@ -36,7 +35,7 @@ const Header: React.FC<HeaderProps> = ({ isButtonVisible, flexDir }) => {
 	return (
 		<>
 			<Flex
-				as="header"
+				as="section"
 				mx={{ base: "2%", sm: "10%" }}
 				mt="1rem"
 				align="center"
@@ -54,15 +53,14 @@ const Header: React.FC<HeaderProps> = ({ isButtonVisible, flexDir }) => {
 											return (
 												<ListItem key={headerLink.key}>
 													<ListIcon
-														as={FaSignOutAlt}
+														as={headerLink.as}
 														color={COLORS.PRIMARY_COLOR}
 														h="1.2rem"
 														mx="0.5rem"
 													/>
 													<NavLinkItem
 														aria-label={headerLink.title}
-														url={headerLink.url}
-														fontSize="1.2rem">
+														url={headerLink.url}>
 														{headerLink.title}
 													</NavLinkItem>
 													<Divider my="0.5rem" />
@@ -85,7 +83,7 @@ const Header: React.FC<HeaderProps> = ({ isButtonVisible, flexDir }) => {
 					align="center">
 					{headerLinksData.map((headerLink: any) => {
 						return (
-							<Box key={headerLink.key} ml="15%">
+							<Box key={headerLink.key} mr="2rem">
 								<NavLinkItem aria-label={headerLink.title} url={headerLink.url}>
 									{headerLink.title}
 								</NavLinkItem>

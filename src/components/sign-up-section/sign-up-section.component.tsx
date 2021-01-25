@@ -8,7 +8,12 @@ import { LeftColumn, RightColumn } from "./sign-up-section-columns";
 const SignUpSection = () => {
 	return (
 		<>
-			<Flex mx="10%" mt="200px" flexDir="column" maxW="1000px">
+			<Flex
+				as="main"
+				mx={{ base: "5%", sm: "10%" }}
+				mt="6rem"
+				flexDir="column"
+				maxW="62.5rem">
 				<Image
 					src={SignUpOverlayImage}
 					alt="sign-up overlay"
@@ -27,15 +32,16 @@ const SignUpSection = () => {
 					position="absolute"
 					display={{ base: "none", sm: "none", md: "flex", lg: "flex" }}
 					mt={{ md: "510px", lg: "520px" }}
-					ml={{ md: "120px", lg: "150px" }}
+					ml={{ md: "110px", lg: "150px" }}
 					zIndex="-1"
 				/>
 				<Flex
-					h="650px"
+					as="section"
+					h="40.63rem"
 					borderRadius="30px"
 					boxShadow="0 3px 3px 2px #000"
-					flexDir="row"
-					ml="15%">
+					flexDir={{ base: "column", sm: "row" }}
+					ml={{ base: "0", md: "15%" }}>
 					<LeftColumn />
 					<RightColumn />
 				</Flex>

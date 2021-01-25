@@ -91,7 +91,7 @@ export const socialIcons: SocialIconsOptions[] = [
 		url: "#",
 		fill: "#5096FE",
 		homeFont: "2rem",
-		signupFont: "1.2rem",
+		signupFont: "1.5rem",
 	},
 	{
 		key: 2,
@@ -100,7 +100,7 @@ export const socialIcons: SocialIconsOptions[] = [
 		url: "#",
 		fill: "#7EF0F8",
 		homeFont: "2.35rem",
-		signupFont: "1.3rem",
+		signupFont: "1.7rem",
 	},
 	{
 		key: 3,
@@ -109,6 +109,6 @@ export const socialIcons: SocialIconsOptions[] = [
 		url: "#",
 		fill: "#FF4747",
 		homeFont: "2rem",
-		signupFont: "1.2rem",
+		signupFont: "1.5rem",
 	},
 ];

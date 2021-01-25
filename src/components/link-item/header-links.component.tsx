@@ -1,5 +1,5 @@
 import React from "react";
-import LinkItem from "./link-item.component";
+import LinkItem from "../link-item/link-item.component";
 import { LinkBoxProps } from "@chakra-ui/react";
 
 export interface NavLinkItemProps {

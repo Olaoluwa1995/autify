@@ -12,13 +12,18 @@ import { Divider } from "../../styles/divider.d";
 const HomePage = () => {
 	return (
 		<>
-			<Flex direction="column" bgGradient="linear(to-b, #68C9BA, #FFFFFF)">
+			<Flex
+				as="header"
+				flexDir="column"
+				bgGradient="linear(to-b, #68C9BA, #FFFFFF)">
 				<Header isButtonVisible flexDir="row" />
 				<BannerSection />
 			</Flex>
-			<ScaleSection />
-			<FeaturesSection />
-			<TestimonialsSection />
+			<Flex as="main" flexDir="column">
+				<ScaleSection />
+				<FeaturesSection />
+				<TestimonialsSection />
+			</Flex>
 			<Divider />
 			<Footer />
 		</>

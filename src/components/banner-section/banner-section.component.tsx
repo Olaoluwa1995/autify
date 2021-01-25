@@ -15,7 +15,7 @@ const BannerSection = () => {
 
 	return (
 		<>
-			<Flex as="section" mt="5rem" mx={{ base: "2%", sm: "10%" }}>
+			<Flex as="section" mt="3rem" mx={{ base: "2%", sm: "10%" }}>
 				<Flex
 					flexDirection="column"
 					textAlign={{ base: "center", sm: "justify" }}

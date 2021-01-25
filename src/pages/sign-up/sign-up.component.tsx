@@ -12,9 +12,12 @@ const SignUpPage = () => {
 			<Flex
 				direction="column"
 				bgGradient="linear(to-b, #68C9BA, #FFFFFF)"
-				h="350px"
-				mb="700px">
-				<Header isButtonVisible={false} flexDir="row-reverse" />
+				h="20rem"
+				mb={{ base: "32rem", sm: "38rem" }}>
+				<Header
+					isButtonVisible={false}
+					flexDir={{ base: "row-reverse", sm: "row" }}
+				/>
 				<SignUpSection />
 			</Flex>
 			<Divider />
