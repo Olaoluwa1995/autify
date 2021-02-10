@@ -7,45 +7,49 @@ type FeatureProps = {
 	key: number;
 	marginTop?: string;
 	mobileMarginTop?: string;
-	marginXAxis: string;
-	ariaLabel: string;
+	alt: string;
 	url: string;
 	src: string;
+	textContainerMarginTop: string;
+	title: string;
 };
-
-const marginXAxis = "2%";
 
 export const featuresData: FeatureProps[] = [
 	{
 		key: 1,
 		src: SearchFeatureImage,
-		ariaLabel: "search feature",
+		alt: "search feature",
 		url: "#",
-		marginXAxis: `${marginXAxis}`,
+		textContainerMarginTop: "13%",
+		title: "Search Data",
 	},
 	{
 		key: 2,
 		src: AccessFeatureImage,
-		marginTop: "20px",
+		marginTop: "30px",
 		mobileMarginTop: "22px",
-		ariaLabel: "access feature",
+		alt: "access feature",
 		url: "#",
-		marginXAxis: `${marginXAxis}`,
+		textContainerMarginTop: "6%",
+		title: "24 Hours Access",
 	},
 	{
 		key: 3,
 		src: PrintOutFeatureImage,
 		marginTop: "15px",
-		ariaLabel: "print-out feature",
+		alt: "print-out feature",
 		url: "#",
-		marginXAxis: `${marginXAxis}`,
+		textContainerMarginTop: "6%",
+		title: "Print Out",
 	},
 	{
 		key: 4,
 		src: SecurityFeatureImage,
+		marginTop: "6px",
 		mobileMarginTop: "20px",
-		ariaLabel: "security feature",
+		alt: "security feature",
 		url: "#",
-		marginXAxis: `${marginXAxis}`,
+		textContainerMarginTop: "8%",
+		title: "Security Code",
 	},
 ];

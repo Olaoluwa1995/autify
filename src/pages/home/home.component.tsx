@@ -7,27 +7,22 @@ import ScaleSection from "../../components/scale-section/scale-section.component
 import FeaturesSection from "../../components/features-section/features-section.component";
 import TestimonialsSection from "../../components/testimonials-section/testimonials-section.component";
 import Footer from "../../components/footer/footer.component";
-import { Divider } from "../../styles/divider.d";
+import { PageDivider } from "../../styles/divider.d";
 
-const HomePage = () => {
+const Home = () => {
 	return (
 		<>
-			<Flex
-				as="header"
-				flexDir="column"
-				bgGradient="linear(to-b, #68C9BA, #FFFFFF)">
-				<Header as="section" isButtonVisible flexDir="row" />
-				<BannerSection />
-			</Flex>
+			<Header as="header" isButtonVisible flexDir="row" />
 			<Flex as="main" flexDir="column">
+				<BannerSection />
 				<ScaleSection />
 				<FeaturesSection />
 				<TestimonialsSection />
 			</Flex>
-			<Divider />
+			<PageDivider />
 			<Footer />
 		</>
 	);
 };
 
-export default HomePage;
+export default Home;

@@ -2,8 +2,8 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { CSSReset, ChakraProvider, theme } from "@chakra-ui/react";
 
-import HomePage from "./pages/home/home.component";
-import SignUpPage from "./pages/sign-up/sign-up.component";
+import Home from "./pages/home/home.component";
+import SignUpPaymentSetup from "./pages/sign-up-payment-setup/sign-up-payment-setup.component";
 import { customTheme } from "./styles/theme";
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
 		<ChakraProvider theme={{ ...theme, ...customTheme }}>
 			<CSSReset />
 			<Switch>
-				<Route exact path="/signup" component={SignUpPage} />
-				<Route exact path="/" component={HomePage} />
+				<Route exact path="/signup" component={SignUpPaymentSetup} />
+				<Route exact path="/" component={Home} />
 			</Switch>
 		</ChakraProvider>
 	);

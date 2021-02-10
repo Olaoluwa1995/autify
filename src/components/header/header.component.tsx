@@ -94,7 +94,8 @@ const Header: React.FC<HeaderProps> = ({ isButtonVisible, flexDir, as }) => {
 				</Flex>
 				{isButtonVisible ? (
 					<CustomButton
-						maxWidth={{ base: "130px" }}
+						maxWidth="130px"
+						minW="100px"
 						w="100%"
 						backgroundColor={COLORS.WHITE}
 						height={{ base: "40px", sm: "50px" }}>

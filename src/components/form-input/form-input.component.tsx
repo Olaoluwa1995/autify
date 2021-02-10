@@ -74,7 +74,7 @@ const FormInput: React.FC<FormInputProps> = ({
 		<FormControl
 			id={name}
 			isInvalid={!!(isTouched && error)}
-			my={{ base: 1, md: 2 }}
+			my={{ base: "0.3rem", md: "0.5rem" }}
 			isRequired={isRequired}
 			w={w || "100%"}
 			{...formControlProps}
@@ -91,7 +91,7 @@ const FormInput: React.FC<FormInputProps> = ({
 				</FormLabel>
 			)}
 
-			<InputGroup size={size} h="3.5rem">
+			<InputGroup size={size} h="2.5rem">
 				{leftElement && <InputLeftElement {...leftElement} h="100%" />}
 
 				{type === "textarea" ? (
@@ -102,7 +102,8 @@ const FormInput: React.FC<FormInputProps> = ({
 						border="2px solid#9C69E2"
 						rounded="10px"
 						{...otherProps}
-						fontSize="1rem"
+						fontSize="0.8rem"
+						h="100%"
 						color="grey"
 						placeholder={placeholder}
 					/>

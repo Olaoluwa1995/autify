@@ -6,6 +6,8 @@ export const COLORS = {
 	DEEP_BLUE: "#212353",
 	WHITE: "#ffffff",
 	AUTIFY_COLOR: "#656691",
+	SIGN_UP_PROGRESS_BAR_COLOR: "#fef5f6",
+	PAYMENT_PAGE_COLOR: "#2E58EC",
 };
 
 const STYLES: Styles = {

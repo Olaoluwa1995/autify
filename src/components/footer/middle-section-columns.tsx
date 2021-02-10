@@ -11,7 +11,7 @@ export const FirstColumn = () => {
 		<Flex
 			flexDir="column"
 			width={{ base: "100%", sm: "35%" }}
-			ml={{ base: "35%", sm: "0" }}
+			ml={{ base: "15%", sm: "0" }}
 			alignItems="flex-start">
 			<Flex flexDir="row">
 				<FooterColoredShapes />

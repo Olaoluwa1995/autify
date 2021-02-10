@@ -11,7 +11,7 @@ const MiddleSection = () => {
 	return (
 		<Flex
 			flexDir={{ base: "column", sm: "row" }}
-			mt="3rem"
+			mt={{ base: "2rem", sm: "3rem" }}
 			color={COLORS.DEEP_BLUE}>
 			<FirstColumn />
 			<SecondColumn />

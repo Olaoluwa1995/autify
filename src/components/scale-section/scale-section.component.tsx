@@ -39,7 +39,12 @@ const ScaleSection = () => {
 					mb="10%">
 					<Box
 						as="h2"
-						fontSize={{ base: "1.8rem", sm: "2rem" }}
+						fontSize={{
+							base: "1.8rem",
+							sm: "1.2rem",
+							md: "1.5rem",
+							lg: "2rem",
+						}}
 						fontWeight="700"
 						textAlign={{ base: "center", sm: "start" }}>
 						Scale With{" "}
@@ -48,6 +53,12 @@ const ScaleSection = () => {
 						</Box>
 					</Box>
 					<Box
+						fontSize={{
+							base: "1rem",
+							sm: "0.7rem",
+							md: "0.9rem",
+							lg: "1rem",
+						}}
 						as="p"
 						textAlign={{ base: "center", sm: "justify" }}
 						mt={{ base: "5%", sm: "10%" }}>

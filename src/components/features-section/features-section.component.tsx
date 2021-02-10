@@ -20,32 +20,34 @@ const FeaturesSection = () => {
 				textAlign="center">
 				<Box
 					as="h2"
-					fontSize={{ base: "2rem", sm: "2.5rem" }}
+					fontSize={{ base: "1.5rem", sm: "1.8rem", md: "2rem", lg: "2.3rem" }}
 					fontWeight="bolder"
 					color={COLORS.DEEP_BLUE}>
 					Features
 				</Box>
 				<Box
-					fontSize={{ base: "1rem", sm: "1.1rem" }}
-					mt={{ base: "1rem", sm: "1.8rem" }}
-					mx={{ base: "5%", sm: "20%" }}>
+					fontSize={{ base: "1rem", sm: "0.8rem", md: "1rem", lg: "1.1rem" }}
+					mt={{ base: "1rem", sm: "1.4rem", md: "1.8rem" }}
+					mx={{ base: "5%", sm: "10%", lg: "20%" }}>
 					{featuresText}
 				</Box>
-				<Flex flexWrap="wrap" mt={{ base: "0.7rem", sm: "1.8rem" }}>
+				<Flex flexWrap="wrap" mt={{ base: "0.7rem", md: "1.8rem" }}>
 					{featuresData.map((feature) => {
 						return (
 							<Box
 								key={feature.key}
-								w={{ base: "100%", sm: "46%" }}
+								w={{ base: "90%", md: "50%", lg: "46%" }}
 								mt={{
 									base: `${feature.mobileMarginTop}`,
-									sm: `${feature.marginTop}`,
+									md: `${feature.marginTop}`,
 								}}
-								mx={feature.marginXAxis}>
+								mx={{ base: "2.5%", md: "0%", lg: "2%" }}>
 								<Feature
-									ariaLabel={feature.ariaLabel}
+									alt={feature.alt}
 									url={feature.url}
 									src={feature.src}
+									textContainerMarginTop={feature.textContainerMarginTop}
+									title={feature.title}
 								/>
 							</Box>
 						);
