@@ -1,6 +1,5 @@
 import React from "react";
 import {
-	Box,
 	Flex,
 	Icon,
 	Input,
@@ -14,10 +13,8 @@ import {
 	MenuItemOption,
 	Text,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
 import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 
-import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 import { COLORS } from "../../styles/theme";
 

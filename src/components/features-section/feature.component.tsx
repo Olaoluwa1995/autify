@@ -40,8 +40,7 @@ const Feature: React.FC<FeatureProps> = ({
 				</Text>
 				<Text
 					fontSize={{
-						base: "0.8rem",
-						md: "0.7rem",
+						base: "0.7rem",
 						lg: "0.8rem",
 						xl: "0.9rem",
 					}}
